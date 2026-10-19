@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "start": "node scripts/serve.mjs",
-    "build": "node scripts/build-careers.mjs && node --check dist/script.js && node --check dist/calculator.mjs && node --check dist/recovery.mjs && node --check dist/career-apply.mjs && node --check api/applications.mjs",
+    "build": "node --check dist/script.js && node --check dist/calculator.mjs && node --check dist/recovery.mjs && node --check dist/career-apply.mjs && node --check api/applications.mjs",
+    "build:careers": "node scripts/build-careers.mjs",
     "test": "node tests/recovery.test.mjs"
   },
   "dependencies": {
