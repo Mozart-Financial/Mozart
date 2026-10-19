@@ -1,170 +1,415 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#111b30">
-    <title>Mozart Financial — Your revenue. Orchestrated.</title>
-    <meta name="description" content="Mozart is building AI-powered deduction recovery for brands. Turn retailer notices into evidence-backed disputes, with your team in control.">
-    <link rel="canonical" href="https://mozart.financial/">
-    <meta property="og:title" content="Mozart Financial — Your revenue. Orchestrated.">
-    <meta property="og:description" content="Evidence-led deduction recovery. Built for the revenue you've already earned.">
-    <meta property="og:image" content="https://www.mozart.financial/assets/mozart-social-landscape-v1.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:alt" content="Mozart logo over a softly blue-tinted river and rolling landscape.">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mozart Financial — Your revenue. Orchestrated.">
-    <meta name="twitter:description" content="Evidence-led deduction recovery. Built for the revenue you've already earned.">
-    <meta name="twitter:image" content="https://www.mozart.financial/assets/mozart-social-landscape-v1.jpg">
-    <meta name="twitter:image:alt" content="Mozart logo over a softly blue-tinted river and rolling landscape.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mozart.financial/">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/platform.css">
-    <script src="/script.js" defer></script>
-    <script src="/platform.js" defer></script>
-    <script type="module" src="/calculator.mjs"></script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://www.mozart.financial/#organization", "name": "Mozart Financial", "url": "https://www.mozart.financial/", "description": "AI-powered deduction recovery platform for consumer brands selling through retailers and distributors.", "email": "start@mozart.financial"}</script></head>
-  <body>
-    <a href="#main" class="skip-link">Skip to content</a>
-    <header class="header">
-      <a class="brand" href="#" aria-label="Mozart Financial home">mozart<span class="brand-period">.</span><span class="brand-descriptor">FINANCIAL</span></a>
-      <nav aria-label="Main navigation">
-        <a class="nav-product" href="/product">Product</a>
-        <a class="nav-calculator" href="#calculator">Recovery calculator</a>
-        <a class="login-link" href="https://app.mozart.financial/login">Login <span aria-hidden="true">↗</span></a>
-        <a class="contact-link" href="https://calendly.com/parthpahuja/mozart-intro-call">Get in touch <span aria-hidden="true">↗</span></a>
-      </nav>
-    </header>
+<!doctype html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111b30">
+<title>Mozart Financial - Get paid for every invoice, in full.</title>
+<meta name="description" content="Mozart finds short pays, unapplied cash and vendor overcharges in your books, pulls the proof, files the dispute and drafts the journal entry. You approve.">
+<link rel="canonical" href="https://mozart.financial/">
+<meta property="og:title" content="Mozart Financial - Get paid for every invoice, in full.">
+<meta property="og:description" content="Find short pays, pull the proof, file the dispute and draft the journal entry. You approve.">
+<meta property="og:image" content="https://www.mozart.financial/assets/mozart-social-landscape-v1.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Mozart logo over a softly blue-tinted river and rolling landscape.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mozart Financial - Get paid for every invoice, in full.">
+<meta name="twitter:description" content="Find short pays, pull the proof, file the dispute and draft the journal entry. You approve.">
+<meta name="twitter:image" content="https://www.mozart.financial/assets/mozart-social-landscape-v1.jpg">
+<meta name="twitter:image:alt" content="Mozart logo over a softly blue-tinted river and rolling landscape.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mozart.financial/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://www.mozart.financial/#organization", "name": "Mozart Financial", "url": "https://www.mozart.financial/", "description": "Mozart finds short pays, deductions, unapplied cash and vendor overcharges in a company's books, gathers the proof, files disputes and drafts the journal entries for approval.", "email": "start@mozart.financial"}</script>
+<style>
+:root{--navy:#111b30;--navy-light:#1b2943;--paper:#f3f5f5;--white:#fbfcfa;--lime:#d7f56c;--lime-soft:#eef8cf;--muted:#afb8c8;--line:#384256;--ink2:#556071;--bd:#dfe4e6;font-family:Helvetica,"Helvetica Neue",Arial,sans-serif;color:var(--white);background:var(--navy)}
+*{box-sizing:border-box}body{margin:0;background:var(--navy);overflow-x:hidden}a{color:inherit;text-decoration:none}
+.header{height:112px;padding:0 4.5%;display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:35px;letter-spacing:-2px;font-weight:700;display:flex;align-items:baseline}.brand i{color:var(--lime);font-style:normal}.brand small{font-size:10px;font-weight:400;letter-spacing:1.7px;margin-left:14px}
+.header nav{display:flex;align-items:center;gap:36px;font-size:14px}.header nav .m{color:var(--muted)}
+.cta-o{border:1px solid #647047;padding:13px 17px;color:var(--lime);display:inline-flex;gap:36px}
+.hero{padding:30px 4.5% 90px}.topline{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:20px;font-size:11px;letter-spacing:1.4px;color:var(--muted)}
+h1{font-size:clamp(42px,5.2vw,82px);letter-spacing:-.055em;line-height:1.04;margin:70px 0 0;font-weight:400}h1 span{color:var(--lime)}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:30px}.hero-row p{max-width:330px;color:#d4d9e2;font-size:16px;line-height:1.55;margin:0}
+.paper{background:var(--paper);color:var(--navy)}
+.sec{padding:110px 4.5%}
+.label{font-size:11px;letter-spacing:1.35px;display:flex;gap:19px}.label b{font-weight:400;opacity:.6}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin:38px 0 56px}
+h2{font-size:clamp(34px,4.25vw,66px);letter-spacing:-.045em;font-weight:400;line-height:1.08;margin:0}h2 span{color:#6c7891}
+.navy h2 span{color:var(--lime)}
+.link{font-size:14px;display:inline-flex;gap:40px;padding-bottom:8px;border-bottom:1px solid #9aa47a;white-space:nowrap}.link span{color:#5d7a12}.navy .link span{color:var(--lime)}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.card{background:#e8ecec;border:1px solid #d9dfe0;border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.w7{grid-column:span 7}.w5{grid-column:span 5}.w6{grid-column:span 6}
+.stage{position:relative;height:330px;padding:34px;background-image:radial-gradient(#d3dadb 1px,transparent 1px);background-size:14px 14px}
+.copy{padding:26px 34px 32px;border-top:1px solid #d9dfe0;background:#eef1f1}.copy h3{font-weight:400;font-size:23px;letter-spacing:-.6px;margin:0 0 10px}.copy p{margin:0;font-size:15.5px;line-height:1.55;color:var(--ink2);max-width:520px}
+.ui{position:absolute;background:var(--white);border:1px solid var(--bd);border-radius:8px;box-shadow:0 10px 30px #111b3012,0 1px 2px #111b3010;color:var(--navy);font-size:13px}
+.ui-h{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid #eceff0;font-size:13px}
+.tag{font-size:11px;padding:3px 8px;border-radius:20px;background:#eef1f3;color:var(--ink2);white-space:nowrap}.tag.l{background:var(--lime);color:var(--navy)}.tag.n{background:var(--navy);color:var(--lime)}
+.row{display:grid;grid-template-columns:1.3fr 1fr .9fr auto;gap:10px;align-items:center;padding:11px 16px;border-bottom:1px solid #f0f2f3;font-size:12.5px}.row:last-child{border:0}.row .s{color:#7a8496;font-size:11.5px}.num{font-variant-numeric:tabular-nums;text-align:right}
+.chip{position:absolute;background:var(--navy);color:var(--white);border-radius:30px;padding:9px 14px;font-size:12.5px;display:flex;gap:8px;align-items:center;box-shadow:0 8px 24px #111b3030;white-space:nowrap}.dot{width:8px;height:8px;border-radius:50%;background:var(--lime)}
+.mark{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:4px;background:var(--navy);color:var(--lime);font-size:10.5px;vertical-align:middle;margin-left:6px}
+.hl{background:#e7f6a8;box-shadow:0 0 0 2px #e7f6a8;border-radius:2px}
+.bar{height:6px;background:#e9edef;border-radius:3px;margin:9px 0}
+.btn{display:inline-flex;gap:10px;align-items:center;background:var(--navy);color:var(--white);padding:10px 14px;border-radius:6px;font-size:12.5px}.btn i{color:var(--lime);font-style:normal}
+.chk{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--lime);color:var(--navy);font-size:12px;font-weight:700}
+.bubble{position:absolute;background:var(--navy);color:var(--white);padding:12px 16px;border-radius:14px 14px 4px 14px;font-size:13.5px;box-shadow:0 8px 24px #111b3025}
+.src{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--bd);border-radius:20px;padding:4px 9px;font-size:11px;margin:8px 6px 0 0;background:#f6f8f8}
+.pill-ind{font-size:10px;letter-spacing:1px;color:#7a8496;text-transform:uppercase}
+.footer{padding:60px 4.5% 30px}.footer-brand{font-size:clamp(70px,14vw,200px);font-weight:700;letter-spacing:-.07em;line-height:1}.footer-brand i{color:var(--lime);font-style:normal}
+.footer-bottom{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:22px;margin-top:40px;font-size:12px;color:var(--muted)}
+/* product page */
+.feat{display:grid;grid-template-columns:1fr 1.15fr;gap:7%;align-items:center;padding:90px 0;border-top:1px solid #d5dbdc}.feat.rev .fcopy{order:2}
+.fcopy .label{margin-bottom:28px}.fcopy h2{font-size:clamp(30px,3.3vw,48px);margin-bottom:22px}.fcopy p{font-size:17px;line-height:1.6;color:var(--ink2);margin:0 0 18px;max-width:470px}
+.fcopy ul{list-style:none;padding:0;margin:24px 0 0;font-size:15px;color:var(--navy)}.fcopy li{padding:11px 0;border-top:1px solid #d5dbdc;display:flex;gap:12px}.fcopy li:before{content:"+";color:#6f8a1d}
+.fstage{position:relative;height:430px;border-radius:8px;background:#e8ecec;border:1px solid #d9dfe0;background-image:radial-gradient(#d3dadb 1px,transparent 1px);background-size:14px 14px;overflow:hidden}
+.btn-l{display:inline-flex;gap:40px;align-items:center;background:var(--lime);color:var(--navy);padding:17px 22px;font-size:16px}
+.quote{font-size:clamp(30px,3.8vw,56px);letter-spacing:-.04em;line-height:1.15;font-weight:400;max-width:1050px;margin:34px 0 0}.quote span{color:var(--lime)}
+.faq{display:grid;grid-template-columns:27% 1fr;gap:3%}.faq details{border-top:1px solid #d5dbdc;padding:22px 0}.faq summary{font-size:20px;letter-spacing:-.4px;cursor:pointer;list-style:none;display:flex;justify-content:space-between}.faq summary:after{content:"+";color:#6f8a1d}.faq p{color:var(--ink2);font-size:16px;line-height:1.6;margin:14px 0 0;max-width:700px}
+.final{background:#dfe9c8;color:var(--navy);padding:100px 4.5%}
+@media(max-width:1000px){.w7,.w5,.w6{grid-column:span 12}.feat,.feat.rev{grid-template-columns:1fr;gap:40px}.feat.rev .fcopy{order:0}.faq{grid-template-columns:1fr}}
+@media(max-width:600px){.header{height:84px;padding:0 6%}.brand{font-size:29px}.brand small,.header nav .m{display:none}.cta-o{padding:10px 12px;gap:12px;font-size:13px}.hero,.sec,.final,.footer{padding-left:6%;padding-right:6%}.sec{padding-top:70px;padding-bottom:70px}.hero-row{display:block}.hero-row p{margin-top:24px}.sec-head{display:block}.sec-head .link{margin-top:26px}h2{font-size:36px}
+.stage{height:300px;padding:20px}.copy{padding:22px}.ui{font-size:12px}.fstage{height:360px}.feat{padding:60px 0}.topline span:last-child{display:none}
+.sc{transform:scale(.82);transform-origin:top left}}
+.stage{overflow:hidden}
+@media(max-width:600px){.stage{height:350px}.stage .ui[style*="right:22%"]{right:6%!important;left:6%!important}.stage .chip[style*="bottom:40px"]{bottom:22px!important}.stage .ui[style*="top:166px"]{top:160px!important;width:66%!important}}
+/* ---- interaction ---- */
+html,body,button,input,select,textarea,code,kbd,pre,samp,svg text{font-family:Helvetica,"Helvetica Neue",Arial,sans-serif}
+button{font:inherit;color:inherit;border:0;background:none;padding:0;margin:0;cursor:pointer;text-align:inherit}
+button:focus-visible,.row[tabindex]:focus-visible,summary:focus-visible{outline:2px solid #6f8a1d;outline-offset:2px}
+.card{transition:transform .25s ease,box-shadow .25s ease}.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px #111b3014}
+.stage.t{height:380px}
+.ix-replay{position:absolute;left:12px;top:7px;z-index:6;font-size:11px;color:#556071;background:#f6f8f8cc;border:1px solid var(--bd);border-radius:20px;padding:3px 9px}
+.ix-replay:hover{color:var(--navy);background:#fff}
+/* 1 find */
+[data-ix=find] .row{position:relative;transition:opacity .35s,transform .35s,background .15s}
+[data-ix=find] .row:hover,[data-ix=find] .row:focus-visible{background:#f1f8d8}
+.ix-hint{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:var(--navy);color:var(--lime);font-size:11px;padding:4px 9px;border-radius:20px;opacity:0;pointer-events:none;transition:opacity .15s}
+.row:hover .ix-hint,.row:focus-visible .ix-hint{opacity:1}
+.ix-off{opacity:0;transform:translateY(6px)}
+.tag.sync:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#6f8a1d;margin-right:6px;animation:ixblink .8s infinite}
+@keyframes ixblink{50%{opacity:.2}}
+/* 2 source */
+.ix-amt{font-size:26px;letter-spacing:-1px;margin-top:4px;display:inline-block}
+.ix-amt:hover{color:#3d5208}
+.drawing .ix-line{animation:ixline .8s ease forwards}.drawing .ix-dot{animation:ixfade .2s .75s both}
+@keyframes ixline{0%{clip-path:inset(0 100% 100% 0)}50%{clip-path:inset(0 calc(100% - 3px) 0 0)}100%{clip-path:inset(0 0 0 0)}}
+@keyframes ixfade{from{opacity:0}to{opacity:1}}
+.pre .ix-line{clip-path:inset(0 100% 100% 0)}.pre .ix-dot,.pre .ix-ok{opacity:0}
+.ix-ok{transition:opacity .3s}
+.pulse .hl{animation:ixpulse .9s 2}
+@keyframes ixpulse{50%{box-shadow:0 0 0 6px #d7f56c88;background:#d7f56c}}
+/* 3 proof */
+.ix-v{transition:opacity .3s}.ix-v.pending{opacity:.35}
+.ix-signed{transition:opacity .3s}.ix-signed.off{opacity:0}
+.ix-att .ix-spin{display:none;width:16px;height:16px;border:2px solid #b9cf6a;border-top-color:var(--navy);border-radius:50%;animation:ixspin .7s linear infinite;flex:none}
+.ix-att.busy .ix-spin{display:inline-block}.ix-att.busy .chk{display:none}
+@keyframes ixspin{to{transform:rotate(360deg)}}
+/* 4 file */
+button.btn:disabled{opacity:.55;cursor:default}
+.ix-prog{margin-top:14px;font-size:12px;color:#556071}.ix-prog .bar{position:relative;overflow:hidden;margin:6px 0 0}.ix-prog .bar i{position:absolute;inset:0 auto 0 0;width:0;background:var(--navy);border-radius:3px}
+.ix-prog.run .bar i{animation:ixbar 1.4s ease forwards}@keyframes ixbar{to{width:100%}}
+.ix-pk{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}.ix-pk li{font-size:11.5px;padding:4px 9px;border-radius:20px;background:#eef1f3}.ix-pk li:before{content:"▤ "}
+.ix-filed{transition:opacity .4s,transform .4s}.ix-filed.off{opacity:0;transform:translateX(30px)}
+/* 5 ask */
+.ix-chips{position:absolute;left:6%;right:6%;bottom:14px;display:flex;flex-wrap:wrap;gap:6px}
+.ix-qc{font-size:11.5px;background:var(--white);border:1px solid var(--bd);border-radius:20px;padding:6px 11px;color:var(--navy)}
+.ix-qc:hover,.ix-qc[aria-pressed=true]{background:var(--lime-soft);border-color:#b9cf6a}
+.ix-typing{display:inline-flex;gap:4px;padding:6px 0}.ix-typing i{width:6px;height:6px;border-radius:50%;background:#7a8496;animation:ixblink 1s infinite}.ix-typing i:nth-child(2){animation-delay:.2s}.ix-typing i:nth-child(3){animation-delay:.4s}
+.ix-srcs{transition:opacity .3s}.ix-srcs.off{opacity:0}
+/* 6 filter */
+.ix-seg{position:absolute;right:6%;top:10px;display:flex;background:#fff;border:1px solid var(--bd);border-radius:20px;padding:2px;z-index:2}
+.ix-seg button{font-size:11.5px;padding:4px 10px;border-radius:16px;color:var(--ink2)}.ix-seg button[aria-pressed=true]{background:var(--navy);color:var(--lime)}
+[data-ix=filter] .row{max-height:60px;overflow:hidden;transition:max-height .35s,opacity .3s,padding .35s}
+[data-ix=filter] .row.ix-hide{max-height:0;opacity:0;padding-top:0;padding-bottom:0;border-width:0}
+/* product page reveal */
+.js .feat .fcopy,.js .feat .fstage{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.js .feat.in .fcopy,.js .feat.in .fstage{opacity:1;transform:none}.js .feat.in .fstage{transition-delay:.12s}
+.faq details[open] p{animation:ixfade .3s}
+@media(max-width:600px){.stage.t{height:380px}.stage.tt{height:480px}.ix-seg{left:6%;right:auto;top:34px}[data-ix=filter] .ui{top:74px!important}.ix-replay{top:6px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.card:hover{transform:none}}
+[hidden]{display:none!important}
 
-    <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-topline"><span>REVENUE, RECONCILED.</span><span>AI FOR DEDUCTION RECOVERY</span></div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="score-lines"><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="score-bars" id="score-bars"></div>
-          <div class="art-wordmark">mozart<span>.</span></div>
-          <div class="art-cross cross-left">+</div><div class="art-cross cross-right">+</div>
-        </div>
-        <div class="hero-caption"><span>FROM FRAGMENTED TO IN SYNC</span></div>
-        <div class="hero-bottom">
-          <h1 id="hero-title">Your revenue.<br><span>Orchestrated.</span></h1>
-          <div class="hero-description"><p>AI-powered deduction recovery.<br>For the revenue you’ve already earned.</p><a class="text-link" href="#approach">Meet Mozart <span aria-hidden="true">↓</span></a></div>
-        </div>
-      </section>
+body{background:#111b30}
 
-      <section id="approach" class="approach section" aria-labelledby="approach-title">
-        <div class="opportunity-aside"><div class="section-label"><span class="section-number">01 /</span> THE OPPORTUNITY</div><div class="document-art" aria-hidden="true"><div class="paper paper-back"><span>RETAILER NOTICE</span><i></i><i></i><i></i></div><div class="paper paper-front"><span>THE COMPLETE PICTURE</span><div class="paper-check">✓</div><i></i><i></i><div class="paper-bottom">EVIDENCE. CONNECTED.</div></div><span class="document-orbit"></span></div></div>
-        <div class="editorial">
-          <h2 id="approach-title">You did the work.<br>You should get paid.</h2>
-          <div class="editorial-copy">
-            <p>A deduction appears. Chasing records, appeals, and payment slows your team down—and keeps your money out of reach.</p>
-            <p class="emphasis">From deduction to money back. With less waiting.</p>
-            <p>Mozart identifies deductions, gathers evidence, submits approved appeals, and follows up on payment. We match recoveries and update your books. Your team approves the key actions; we handle the rest.</p>
-          </div>
-        </div>
-      </section>
+.btn-l{border-radius:0}
+.harn-steps{display:grid;grid-template-columns:1.6fr repeat(5,1fr);gap:4px;padding:10px 16px 4px;font-size:10px;letter-spacing:1px;color:#7a8496;text-transform:uppercase}
+.hrow{display:grid;grid-template-columns:1.6fr repeat(5,1fr);gap:4px;align-items:center;padding:9px 16px;border-top:1px solid #f0f2f3;font-size:12px}
+.hrow .t{line-height:1.3}.hrow .t .s{font-size:10.5px;color:#7a8496}
+.hrow i{height:6px;border-radius:3px;background:#e9edef;transition:background .4s}.hrow i.on{background:var(--navy)}.hrow i.cur{background:var(--lime);box-shadow:0 0 0 2px #b9cf6a}
+.hst{grid-column:2/7;font-size:11px;color:#5d7a12;margin-top:-2px}
+.cline{display:grid;grid-template-columns:1fr auto auto;gap:10px;padding:9px 16px;border-top:1px solid #f0f2f3;font-size:12.5px;align-items:center;transition:background .3s}
+.cline.m{background:#f1f8d8}.cline.pr.m{background:#fbf3d0}[data-ix=pay] .cline{grid-template-columns:1fr 80px 96px}[data-ix=pay] .cline .ck{justify-self:end}.cline .ck{opacity:0;transition:opacity .3s}.cline.m .ck{opacity:1}
+.navy-sec{padding:110px 4.5%;border-top:1px solid var(--line)}
+.navy-sec .sec-head p{color:var(--muted);max-width:360px;font-size:16px;line-height:1.55;margin:0}
+.ngrid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.n5{grid-template-columns:repeat(5,1fr)}.n3{grid-template-columns:repeat(3,1fr)}.n2{grid-template-columns:1fr 1fr}
+.ncell{background:var(--navy);padding:30px 26px 34px}
+.ncell .ix{font-size:12px;color:var(--lime);letter-spacing:1px}.ncell h3{font-weight:400;font-size:23px;letter-spacing:-.6px;margin:34px 0 10px}.ncell p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+.ncell .ex{margin-top:18px;color:var(--white);border-left:2px solid var(--lime);padding-left:12px}
+.stat{float:right;font-size:11px;padding:3px 9px;border-radius:20px;border:1px solid var(--line);color:var(--muted)}.stat.l{background:var(--lime);color:var(--navy);border-color:var(--lime)}
+.final h2 span{color:#5d7a12}.final .sec-head p{color:var(--ink2);max-width:380px;margin:0;font-size:16px;line-height:1.55}
+@media(max-width:1000px){.n5{grid-template-columns:1fr 1fr}.n3,.n2{grid-template-columns:1fr}}
+@media(max-width:600px){.header,.hero,.sec,.final,.footer,.navy-sec{padding-left:16px!important;padding-right:16px!important}.navy-sec{padding-top:70px;padding-bottom:70px}.n5{grid-template-columns:1fr}.ncell h3{margin-top:18px}.hrow,.harn-steps{grid-template-columns:1.3fr repeat(5,1fr);padding-left:12px;padding-right:12px}.harn-steps{font-size:8px;letter-spacing:0}}
 
-      <section id="platform" class="pf sec pf-paper" aria-labelledby="platform-title"><div class="pf-label"><b>02 /</b>THE PLATFORM</div>
-<div class="pf-head"><div><h2 id="platform-title">Every deduction found.<br><span>Every dollar traced.</span></h2><p class="pf-sub">From the first notice to the final outcome. One clear path through every deduction.</p></div><a class="pf-link" href="/product">See the product <span>↗</span></a></div>
-<div class="bento">
-<article class="card w7"><div class="stage" data-ix="find"><div class="ui" style="left:6%;right:6%;top:58px">
- <div class="ui-h"><span>Short-paid invoices · last 90 days</span><span class="tag" data-count="14">14 found</span></div>
- <div class="row" tabindex="0"><span>Walmart<div class="s">INV 118842</div></span><span class="s">22 – Shortage</span><span class="num">$4,812.40</span><span class="tag l">New</span><span class="ix-hint" aria-hidden="true">Open case →</span></div>
- <div class="row" tabindex="0"><span>UNFI<div class="s">INV 119207</div></span><span class="s">MCB promo</span><span class="num">$2,140.00</span><span class="tag l">New</span><span class="ix-hint" aria-hidden="true">Open case →</span></div>
- <div class="row" tabindex="0"><span>Sysco<div class="s">INV 120324</div></span><span class="s">Pricing</span><span class="num">$968.75</span><span class="tag">In review</span><span class="ix-hint" aria-hidden="true">Open case →</span></div>
- <div class="row" tabindex="0"><span>US Foods<div class="s">INV 120511</div></span><span class="s">OS&amp;D</span><span class="num">$412.10</span><span class="tag">In review</span><span class="ix-hint" aria-hidden="true">Open case →</span></div>
-</div><div class="chip" style="right:7%;top:26px"><span class="dot"></span>Connected to QuickBooks</div></div><div class="copy"><h3>Finds deductions in your books</h3><p>Mozart reads QuickBooks for short-paid invoices, including the ones no one ever emailed you about.</p></div></article>
-<article class="card w5"><div class="stage" data-ix="source"><div class="ui" style="left:6%;width:56%;top:30px;padding:16px;z-index:1">
- <div class="pill-ind">Case WM-22-4471</div><div style="margin-top:10px;color:#7a8496;font-size:12px">Deduction amount</div>
- <div><button type="button" class="ix-amt" aria-label="Trace $4,812.40 to its source">$4,812.40<span class="mark ix-mk">1</span></button></div>
- 
-</div>
-<div class="ix-line" style="position:absolute;left:18%;top:150px;width:26%;height:72px;border-left:1.5px solid #111b30;border-bottom:1.5px solid #111b30;border-bottom-left-radius:10px"></div><div class="ix-dot" style="position:absolute;left:calc(44% - 4px);top:218px;width:8px;height:8px;border-radius:50%;background:#111b30"></div>
-<div class="ui" style="right:6%;width:50%;top:166px;padding:16px;font-size:11.5px;line-height:1.7">
- <div style="display:flex;justify-content:space-between"><span class="pill-ind">Walmart remittance · p. 2</span><span class="mark" style="margin:0">1</span></div>
- <div class="bar" style="width:90%"></div>
- <div>Inv 118842 &nbsp; Code 22 &nbsp; <span class="hl">Shortage $4,812.40</span></div>
- <div class="bar" style="width:70%"></div><div class="bar" style="width:84%"></div>
- <div class="ix-ok" style="margin-top:8px;color:#5d7a12">✓ Quote verified on page</div>
-</div></div><div class="copy"><h3>Every number has a source</h3><p>Each amount links to the exact words on the page it came from, so an auditor can follow it in one click.</p></div></article>
-<article class="card w5"><div class="stage t" data-ix="proof"><div class="ui" style="left:6%;right:6%;top:40px">
- <div class="ui-h"><span>fedex.com · Proof of delivery</span><span class="tag n ix-signed">Signed in by Mozart</span></div>
- <div style="padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;font-size:12.5px">
-  <div><div class="s" style="color:#7a8496;font-size:11px">Tracking</div><span class="ix-v">7714 2290 3318</span></div>
-  <div><div class="s" style="color:#7a8496;font-size:11px">Delivered</div><span class="ix-v">Sep 12, 9:42 AM</span></div>
-  <div><div class="s" style="color:#7a8496;font-size:11px">Signed by</div><span class="ix-v">R. MARTINEZ · DC 6094</span></div>
-  <div><div class="s" style="color:#7a8496;font-size:11px">Pieces</div><span class="ix-v">48 of 48</span></div>
- </div>
- <div style="margin:0 16px 16px;padding:10px 12px;background:var(--lime-soft);border-radius:6px;display:flex;gap:10px;align-items:center;font-size:12.5px" class="ix-att" aria-live="polite"><span class="ix-spin"></span><span class="chk">✓</span><span class="ix-msg">Attached to case WM-22-4471</span></div>
-</div></div><div class="copy"><h3>Pulls the proof for you</h3><p>Mozart signs in to the carrier, pulls proof of delivery by tracking number and files it on the case.</p></div></article>
-<article class="card w7"><div class="stage t" data-ix="file"><div class="ui" style="left:8%;right:22%;top:44px;padding:20px">
+.hgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:5%;align-items:center;margin-top:56px}
+.hgrid h1{margin:0;font-size:clamp(40px,4.6vw,70px)}.hsub{color:#d4d9e2;font-size:17px;line-height:1.55;max-width:440px;margin:26px 0 30px}
+.hvis{position:relative}.hvis .ix-replay{display:none}.hvis .ui{position:relative!important;left:auto!important;right:auto!important;top:auto!important}
+.w8{grid-column:span 8}.w5,.w7{}.w4{grid-column:span 4}.tall{grid-row:span 2}.tall .stage{height:auto;flex:1;min-height:420px}
+.band{display:grid;grid-template-columns:1.2fr 1fr;gap:6%;padding:90px 4.5%}
+.band .big{font-size:clamp(22px,2.2vw,30px);letter-spacing:-.6px;line-height:1.3;margin:22px 0 0}.setup{color:var(--lime);margin:34px 0 0;font-size:15px}
+.trust{list-style:none;margin:0;padding:0;align-self:center}.trust li{display:flex;gap:14px;padding:18px 0;border-top:1px solid var(--line);color:#d4d9e2;font-size:16px}.trust li:last-child{border-bottom:1px solid var(--line)}.trust span{color:var(--lime)}
+.final{padding:80px 4.5%}.final .sec-head{margin:0}
+@media(max-width:1000px){.hgrid,.band{grid-template-columns:1fr;gap:40px}.w8,.w4,.w5,.w7{grid-column:span 12}.tall{grid-row:auto}}
+@media(max-width:600px){.band{padding:60px 16px}.hgrid{margin-top:36px}.hvis .harn-steps{font-size:8px}}
+
+.band{grid-template-columns:1fr!important;padding-top:64px;padding-bottom:56px}.band .big{display:inline-block;margin-right:3%;max-width:46%;vertical-align:top}
+.uh{background:#0c1426;padding:64px 4.5%;border-top:1px solid var(--line);font-family:Helvetica,"Helvetica Neue",Arial,sans-serif}
+.uhh{font-size:clamp(28px,3vw,44px);letter-spacing:-.04em;margin:16px 0 32px;font-weight:400}
+.flow{display:flex;align-items:stretch}.flow>i{flex:0 0 36px;align-self:center;height:1px;background:var(--lime);transform-origin:left}
+.fb{flex:1;border:1px solid var(--lime);padding:16px;font-size:14px;line-height:1.4;color:#d4d9e2}.fb b{font-weight:400;display:block}
+.fb span{display:block;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:1.5px;color:var(--lime);margin-bottom:8px}
+.fb.fsrc{border-style:dashed;color:var(--white)}
+.rec{margin-top:14px;border:1px solid var(--lime);background:rgba(215,245,108,.07);padding:12px 16px;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.5px;color:var(--lime)}
+.pts{list-style:none;padding:0;margin:32px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.pts span{font-family:ui-monospace,Menlo,monospace;color:var(--lime);font-size:12px}.pts b{display:block;font-weight:400;font-size:17px;margin:10px 0 6px}.pts p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+.bench{margin:30px 0 0;padding-top:22px;border-top:1px solid var(--line);font-size:17px}
+.js .uh .fb,.js .uh .rec{opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s}.js .uh .flow>i{transform:scaleX(0);transition:transform .4s}
+.js .uh.in .fb,.js .uh.in .rec{opacity:1;transform:none}.js .uh.in .flow>i{transform:none}
+.uh.in .fb:nth-child(3){transition-delay:.15s}.uh.in .fb:nth-child(5){transition-delay:.3s}.uh.in .fb:nth-child(7){transition-delay:.45s}.uh.in .fb:nth-child(9){transition-delay:.6s}.uh.in .rec{transition-delay:.8s}
+@media(max-width:1000px){.pts{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.band .big{max-width:none;display:block}.uh{padding:60px 16px}.flow{flex-direction:column}.flow>i{flex:0 0 22px;width:1px;height:auto;align-self:flex-start;margin-left:24px;transform-origin:top}.pts{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.js .uh .fb,.js .uh .rec{opacity:1;transform:none}.js .uh .flow>i{transform:none}}
+.band{background:#fff;color:#111b30;border-top:0}.band .label{color:#556071}.band .setup{color:#5d7a12}
+.feed{height:384px;box-sizing:border-box;background:#fff;color:#111b30;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.28);padding:22px 24px 10px}
+.fh{display:flex;justify-content:space-between;align-items:baseline;font-size:15px;margin-bottom:6px}.fh b{font-weight:400}.fh span{font-size:13px;color:#8a93a3}
+.fl{position:relative;height:304px;overflow:hidden}.fr{position:absolute;left:0;right:0;height:76px;display:grid;grid-template-columns:38px minmax(0,1fr) 104px;gap:0 14px;align-items:center;transition:top .5s ease,opacity .5s ease}
+.fr.new,.fr.gone{opacity:0}.ft{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fi{width:38px;height:38px;border-radius:50%;background:#f1f3f5;display:grid;place-items:center}.fi svg{width:16px;height:16px;fill:none;stroke:#6b7486;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.ft{font-size:15px;line-height:1.3}.fa{font-size:15px;font-variant-numeric:tabular-nums;text-align:right}
+.fp{max-width:100%;box-sizing:border-box;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-block;align-items:center;gap:6px;margin-top:6px;font-size:12px;color:#6b7486;background:#f3f5f6;border-radius:20px;padding:3px 10px;transition:opacity .45s ease}
+.fp.fade{opacity:0}.fp i{margin-right:6px;font-style:normal;color:#5d7a12;font-weight:700}
+@media(prefers-reduced-motion:reduce){.fr,.fp{transition:none}}
+.flinks{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:14px;margin-top:28px}.flinks a{color:inherit;opacity:.8}.flinks a:hover{opacity:1}
+</style></head><body>
+<header class="header"><a class="brand" href="/" aria-label="Mozart Financial home">mozart<i>.</i><small>FINANCIAL</small></a><nav><a class="m" href="/product">Product</a><a class="m" href="#under">How it works</a><a class="cta-o" href="https://calendly.com/parthpahuja/mozart-intro-call" target="_blank" rel="noopener">Book a demo <span>↗</span></a></nav></header>
+<section class="hero"><div class="topline"><span>Short pays, disputed and reconciled.</span><span>FIND · PROVE · FILE · COLLECT · BOOK</span></div>
+<div class="hgrid"><div><h1>Get paid for every invoice, <span>in full.</span></h1><p class="hsub">Mozart finds short pays, unapplied cash and vendor overcharges, pulls the proof, files the dispute and drafts the journal entry. You approve.</p><a class="btn-l" href="https://calendly.com/parthpahuja/mozart-intro-call" target="_blank" rel="noopener">Book a demo <span>↗</span></a></div>
+<div class="hvis" data-ix="harness"><div class="feed"><div class="fh"><b>Cedar Valley Foods</b><span>Today</span></div><div class="fl"></div></div></div></div></section>
+<section class="sec paper" id="product"><div class="label"><b>01 /</b>THE PLATFORM</div>
+<div class="sec-head"><h2>Every short pay worked.<br><span>Every dollar traced to a document.</span></h2><a class="link" href="/product">See the product <span>↗</span></a></div>
+<div class="bento"><article class="card w8"><div class="stage t" data-ix="file"><div class="ui" style="left:8%;right:22%;top:44px;padding:20px">
  <div class="pill-ind ix-st" aria-live="polite">Ready for approval</div>
  <div style="font-size:24px;letter-spacing:-.8px;margin:10px 0 4px">UNFI owes you $2,140.00</div>
  <div style="color:#7a8496;font-size:12px">Packet: invoice, BOL, signed POD, promo agreement</div>
  <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap"><button type="button" class="btn ix-approve">Approve and file <i>↗</i></button><button type="button" class="btn ix-review" aria-expanded="false" style="background:#eef1f3;color:var(--navy)">Review packet</button></div>
  <div class="ix-prog" hidden>Filing on UNFI…<div class="bar"><i></i></div></div>
  <ul class="ix-pk" hidden><li>Invoice</li><li>BOL</li><li>Signed POD</li><li>Promo agreement</li></ul>
-</div><div class="chip ix-filed" style="right:6%;bottom:40px"><span class="chk" style="width:16px;height:16px;font-size:10px">✓</span>Filed on UNFI · #DSP-558213</div></div><div class="copy"><h3>You approve. Mozart files.</h3><p>A person reviews every packet. On approval, Mozart files it on the portal and keeps the confirmation.</p></div></article>
-<article class="card w6"><div class="stage t tt" data-ix="ask"><div class="bubble ix-q" aria-live="polite" style="right:6%;top:32px;max-width:78%">Why is Sysco short-paying invoice 120324?</div>
+</div><div class="chip ix-filed" style="right:6%;bottom:40px"><span class="chk" style="width:16px;height:16px;font-size:10px">✓</span>Filed on UNFI · #DSP-558213</div></div><div class="copy"><h3>You approve. Mozart files.</h3><p>A person reviews every packet. On approval, Mozart files it on the portal and keeps the confirmation.</p></div></article><article class="card w4"><div class="stage t" data-ix="cash"><div class="ui" style="left:6%;right:6%;top:44px">
+ <div class="ui-h"><span>Payment from Sysco</span><span class="tag n">$48,210.00</span></div>
+ <div class="cline"><span>INV 120318</span><span class="num">$18,400.00</span><span class="ck chk">✓</span></div>
+ <div class="cline"><span>INV 120320</span><span class="num">$12,860.00</span><span class="ck chk">✓</span></div>
+ <div class="cline"><span>INV 120322</span><span class="num">$9,120.00</span><span class="ck chk">✓</span></div>
+ <div class="cline"><span>INV 120324</span><span class="num">$8,798.75</span><span class="ck chk">✓</span></div>
+ <div style="padding:12px 16px;border-top:1px solid #eceff0;font-size:12.5px" class="cmsg" aria-live="polite">Matching to open invoices…</div>
+</div><div class="chip ix-hand off" style="left:6%;bottom:22px;transition:opacity .4s"><span class="dot"></span>$968.75 short · handed to Deductions</div></div><div class="copy"><h3>Cash application</h3><p>A payment is matched to the invoices it pays. Whatever is short becomes a deduction case.</p></div></article><article class="card w4"><div class="stage t" data-ix="pay"><div class="ui" style="left:6%;right:6%;top:40px">
+ <div class="ui-h"><span>Brightway Freight · bill 7781</span><span class="tag n">$2,310.00</span></div>
+ <div class="cline"><span>Billed</span><span class="num">42 pallets</span><span></span></div>
+ <div class="cline"><span>PO 4410</span><span class="num">42 pallets</span><span class="ck chk">✓</span></div>
+ <div class="cline pr"><span>Receipt</span><span class="num">40 pallets</span><span class="ck tag l">$110.00 over</span></div>
+ <div style="padding:12px 16px;border-top:1px solid #eceff0"><button type="button" class="btn ix-credit">Request credit <i>↗</i></button></div>
+</div></div><div class="copy"><h3>Vendor bills, checked before you pay.</h3><p>Each bill is matched to its PO and receipt. Overcharges get a credit request.</p></div></article>
+<article class="card w4"><div class="stage t" data-ix="ask"><div class="bubble ix-q" aria-live="polite" style="right:6%;top:32px;max-width:78%">Why is Sysco short-paying invoice 120324?</div>
 <div class="ui" style="left:6%;right:12%;top:104px;padding:16px;line-height:1.55">
  <div class="pill-ind" style="margin-bottom:6px">Mozart</div>
  <div class="ix-body" aria-live="polite">Sysco paid $968.75 less, coded <b style="font-weight:600">pricing</b>. Their remittance bills at the old $41.20 case price; your Aug 1 price letter set $44.95.
  <div><span class="src">▤ Sysco remittance · p.1</span><span class="src">▤ Price letter Aug 1</span></div></div>
-</div><div class="ix-chips" aria-label="Suggested questions"><button type="button" class="ix-qc">Why is Sysco short-paying invoice 120324?</button><button type="button" class="ix-qc">What does Walmart code 22 mean?</button><button type="button" class="ix-qc">How much did UNFI deduct last month?</button></div></div><div class="copy"><h3>Ask Mozart</h3><p>Ask about any payer, invoice or case. Answers come from your own records, with links to each source.</p></div></article>
-<article class="card w6"><div class="stage t" data-ix="filter"><div class="ix-seg" role="group" aria-label="Filter by industry"><button type="button" data-f="all" aria-pressed="true">All</button><button type="button" data-f="brand" aria-pressed="false">Brands</button><button type="button" data-f="staffing" aria-pressed="false">Staffing</button><button type="button" data-f="freight" aria-pressed="false">Freight</button></div><div class="ui" style="left:6%;right:6%;top:54px">
+</div><div class="ix-chips" aria-label="Suggested questions"><button type="button" class="ix-qc">Why is Sysco short-paying invoice 120324?</button><button type="button" class="ix-qc">What does Walmart code 22 mean?</button><button type="button" class="ix-qc">How much did UNFI deduct last month?</button></div></div><div class="copy"><h3>Ask Mozart</h3><p>Ask about any payer, invoice or case. Answers come from your own records, with links to each source.</p></div></article><article class="card w4"><div class="stage t" data-ix="filter"><div class="ix-seg" role="group" aria-label="Filter by industry"><button type="button" data-f="all" aria-pressed="true">All</button><button type="button" data-f="brand" aria-pressed="false">Brands</button><button type="button" data-f="staffing" aria-pressed="false">Staffing</button><button type="button" data-f="freight" aria-pressed="false">Freight</button></div><div class="ui" style="left:6%;right:6%;top:54px">
  <div class="ui-h"><span>Open short-pays · all customers</span><span class="tag ix-badge" aria-live="polite">3 industries</span></div>
- <div class="row" data-k="brand" style="grid-template-columns:auto 1fr auto"><span class="tag l">Brand</span><span>Walmart · 22 – Shortage</span><span class="num">$4,812.40</span></div>
+ <div class="row" data-k="brand" style="grid-template-columns:auto 1fr auto"><span class="tag l">Brand</span><span>Walmart · 22 - Shortage</span><span class="num">$4,812.40</span></div>
  <div class="row" data-k="staffing" style="grid-template-columns:auto 1fr auto"><span class="tag" style="background:#dfe6f3">Staffing</span><span>Northbeam Health · rate dispute</span><span class="num">$3,276.00</span></div>
  <div class="row" data-k="freight" style="grid-template-columns:auto 1fr auto"><span class="tag" style="background:#f3e9d6">Freight</span><span>Atlas Home Goods · detention</span><span class="num">$1,150.00</span></div>
-</div></div><div class="copy"><h3>Brands, staffing, freight</h3><p>Retailer chargebacks, client short-pays and shipper disputes run through the same workflow.</p></div></article>
+</div></div><div class="copy"><h3>Brands, staffing, freight</h3><p>Retailer chargebacks, client short-pays and shipper disputes are worked the same way.</p></div></article></div></section>
+<section class="band"><div class="bcol"><div class="label"><b>WHO RUNS IT</b></div>
+<p class="big">Finance teams: connect once, then just approve.</p><p class="big">Accounting firms: run every client in one place, without adding staff.</p>
+<p class="setup">Forward your emails, connect your books, add portal logins.</p></div>
+</section>
+<section class="uhx" id="under"><div class="uhx-in">
+<div class="label"><b>UNDER THE HOOD</b></div>
+<h2 class="uhx-h">Built so every number can be checked.</h2>
+<p class="uhx-sub">Your systems in, checked outcomes out, and a record that is never overwritten.</p>
+<div class="uhx-vis" aria-label="Diagram: email, QuickBooks, Walmart, UNFI, FedEx and bank flow into Mozart, which checks each item and produces filed disputes, matched payments and booked entries, all kept in a permanent record."><svg class="uhx-svg" role="img" aria-hidden="true"></svg></div>
+<div class="uhx-caps"><p><b>AI copies, code does the math</b>Every number checked against its page.</p><p><b>Same recorded steps on every portal</b>Every click logged.</p><p><b>Nothing posts without approval</b>And never by whoever prepared it.</p></div>
+<p class="uhx-bench">Before you start, Mozart runs on your last 12 months and shows you what it would have caught.</p>
 </div></section>
+<style>
+.uhx{background:#111b30;color:#fbfcfa;font-family:Helvetica,"Helvetica Neue",Arial,sans-serif;padding:110px 0 100px}
+.uhx-in{padding:0 4.5%;max-width:1440px;margin:0 auto}
+.uhx-h{font-size:clamp(30px,3.4vw,52px);letter-spacing:-.045em;font-weight:400;line-height:1.08;margin:20px 0 14px;font-family:inherit;color:#fbfcfa}
+.uhx-sub{color:rgba(251,252,250,.55);font-size:17px;margin:0;max-width:520px;line-height:1.5}
+.uhx-vis{margin:36px 0 10px}.uhx-svg{display:block;width:100%;height:auto;overflow:visible}
+.uhx-svg text{font-family:Helvetica,"Helvetica Neue",Arial,sans-serif}
+.uhx-svg .ln{fill:none;stroke-width:1.9;stroke-linecap:round;transition:stroke-opacity .5s}
+.uhx-svg .ln.i{stroke:#fbfcfa;stroke-opacity:.4}.uhx-svg .ln.o{stroke:#d7f56c;stroke-opacity:.6}
+.uhx-svg .on .ln,.uhx-svg .ln.on{stroke-opacity:.95}
+.uhx-svg .pl rect{fill:#18233b;stroke:rgba(251,252,250,.3);stroke-width:1.2;transition:stroke .5s,fill .5s}
+.uhx-svg .pl.on rect{stroke:#fbfcfa;fill:#22304d}.uhx-svg .pl.out.on rect{stroke:#d7f56c}
+.uhx-svg .pl text{fill:rgba(251,252,250,.8)}.uhx-svg .pl .cnt{fill:#d7f56c}
+.uhx-svg .ic{fill:none;stroke:rgba(251,252,250,.8);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.uhx-svg .tag{transition:opacity .5s}.uhx-svg .tag text{text-transform:none;letter-spacing:0}
+.uhx-caps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:24px}
+.uhx-caps p{margin:0;color:rgba(251,252,250,.5);font-size:14px;line-height:1.5}.uhx-caps b{display:block;color:#fbfcfa;font-weight:400;font-size:17px;margin-bottom:4px}
+.uhx-bench{color:rgba(251,252,250,.5);font-size:15px;margin:48px 0 0}
+@media(max-width:700px){.uhx{padding:70px 0 64px}.uhx-in{padding:0 16px}.uhx-caps{grid-template-columns:1fr;gap:20px}}
+</style>
+<script>
+(function(){
+var sec=document.currentScript.previousElementSibling.previousElementSibling,svg=sec.querySelector('.uhx-svg'),NS='http://www.w3.org/2000/svg';
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var LIME='#d7f56c',NAVY='#111b30';
+var SRC=[['Email','M1 3h12v8H1z M1 3l6 4.5L13 3'],['QuickBooks','M2 1h10v12H2z M4.5 4.5h5 M4.5 7h5 M4.5 9.5h3'],['Walmart','M1 2h2l1.6 7h7L13 4H4 M5.5 12h.1 M10.5 12h.1'],['UNFI','M1.5 4L7 1.5 12.5 4v6L7 12.5 1.5 10z M1.5 4L7 6.5 12.5 4 M7 6.5v6'],['FedEx','M1 3h8v6H1z M9 5h2.5L13 7v2H9 M3.5 11h.1 M10.5 11h.1'],['Bank','M1 5L7 1.5 13 5z M2.5 6.5v4 M5.5 6.5v4 M8.5 6.5v4 M11.5 6.5v4 M1 12h12']];
+var OUT=[['Disputes filed',128],['Payments matched',2431],['Entries booked',3019]];
+var CHECKS=['$1,000.00 found on page 1','Virus scan clean','Approved by J. Ortiz','Debits = credits','Recorded steps replayed','Ties out to QuickBooks'];
+var inP,outP,srcG,outG,packets,ticks,tickG,tag,tagT,tagR,pulse,core,ci,run=false,last=0,spawn=0,mode='',tagClock=0,pulseT=-1,V;
+function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e}
+function fmt(n){return n.toLocaleString('en-US')}
+function pill(x,y,w,h,label,icon,out,count){var g=el('g',{'class':'pl'+(out?' out':'')});el('rect',{x:x,y:y,width:w,height:h,rx:Math.min(h/2,19)},g);
+ if(out&&V){var t1=el('text',{x:x+w/2,y:y+23,'text-anchor':'middle','font-size':11.5},g);t1.textContent=label;var c1=el('text',{x:x+w/2,y:y+42,'text-anchor':'middle','font-size':13,'class':'cnt'},g);c1.textContent=fmt(count);g.cnt=c1;g.n=count;return g}
+ var tx=x+14;if(icon){var ig=el('g',{transform:'translate('+(x+12)+','+(y+h/2-7)+')'},g);el('path',{d:icon,'class':'ic'},ig);tx=x+34}
+ if(out){el('circle',{cx:x+16,cy:y+h/2,r:4,fill:LIME},g);tx=x+28}
+ var t=el('text',{x:tx,y:y+h/2+5,'font-size':V?12:14},g);t.textContent=label;
+ if(out){var c=el('text',{x:x+w-14,y:y+h/2+5,'text-anchor':'end','font-size':V?12:14,'class':'cnt'},g);c.textContent=fmt(count);g.cnt=c;g.n=count}
+ return g}
+function build(){var w=sec.clientWidth,v=w<700?'v':'h';if(v===mode)return;mode=v;V=v==='v';svg.innerHTML='';packets=[];inP=[];outP=[];srcG=[];outG=[];ticks=0;ci=0;
+ var W,H,c,src=[],out=[],rec;
+ if(!V){W=1200;H=440;c={x:600,y:220,s:124};SRC.forEach(function(s,i){src.push({x:20,y:20+i*72,w:170,h:38,ax:190,ay:39+i*72})});OUT.forEach(function(s,i){out.push({x:960,y:101+i*100,w:220,h:38,ax:960,ay:120+i*100})});rec={x1:440,x2:760,y:420}}
+ else{W=360;H=710;c={x:180,y:390,s:110};SRC.forEach(function(s,i){var col=i<3?0:1,row=i%3;src.push({x:col?212:8,y:10+row*56,w:140,h:36,ax:col?212:148,ay:28+row*56})});OUT.forEach(function(s,i){out.push({x:4+i*120,y:640,w:112,h:56,ax:60+i*120,ay:640})});rec={x1:40,x2:320,y:770}}
+ svg.setAttribute('viewBox','0 0 '+W+' '+H);
+ var lg=el('g',{});var half=c.s/2;
+ src.forEach(function(p){var d;if(!V)d='M'+p.ax+','+p.ay+' C'+(p.ax+230)+','+p.ay+' '+(c.x-half-200)+','+c.y+' '+(c.x-half)+','+c.y;
+  else{var mx=p.ax<180?163:197;d='M'+p.ax+','+p.ay+' C'+mx+','+p.ay+' '+mx+','+p.ay+' '+mx+','+(p.ay+20)+' S'+c.x+','+(c.y-half-70)+' '+c.x+','+(c.y-half)}
+  inP.push(el('path',{d:d,'class':'ln i'},lg))});
+ out.forEach(function(p){var d;if(!V)d='M'+(c.x+half)+','+c.y+' C'+(c.x+half+200)+','+c.y+' '+(p.ax-230)+','+p.ay+' '+p.ax+','+p.ay;
+  else d='M'+c.x+','+(c.y+half)+' C'+c.x+','+(c.y+half+80)+' '+p.ax+','+(p.ay-90)+' '+p.ax+','+p.ay;
+  outP.push(el('path',{d:d,'class':'ln o'},lg))});
+ src.forEach(function(p,i){srcG.push(pill(p.x,p.y,p.w,p.h,SRC[i][0],SRC[i][1]))});
+ out.forEach(function(p,i){outG.push(pill(p.x,p.y,p.w,p.h,OUT[i][0],null,1,OUT[i][1]))});
+ pulse=el('rect',{x:c.x-half,y:c.y-half,width:c.s,height:c.s,rx:28,fill:'none',stroke:LIME,'stroke-width':1.2,opacity:0});
+ core=el('rect',{x:c.x-half,y:c.y-half,width:c.s,height:c.s,rx:28,fill:NAVY,stroke:'#fbfcfa','stroke-width':1.5});
+ var m=el('text',{x:c.x,y:c.y+8,'text-anchor':'middle','font-size':V?22:25,'font-weight':700,fill:'#fbfcfa','letter-spacing':'-1'});m.innerHTML='mozart<tspan fill="'+LIME+'">.</tspan>';
+ tag=el('g',{'class':'tag',opacity:0});tagR=el('rect',{y:c.y-half-46,height:30,rx:15,fill:'#fbfcfa'},tag);tagT=el('text',{y:c.y-half-26,'text-anchor':'middle','font-size':13,fill:NAVY},tag);tag.cx=c.x;
+ 
+ 
+ 
+ 
+ 
+ pulse.c=c;
+}
+function setTag(){tagT.innerHTML=CHECKS[ci++%CHECKS.length]+' <tspan fill="#7a9a14" font-weight="700">✓</tspan>';var w=tagT.getComputedTextLength()+32;tagT.setAttribute('x',tag.cx);tagR.setAttribute('x',tag.cx-w/2);tagR.setAttribute('width',w)}
+function hl(p,on){[].concat(inP,outP,srcG,outG).forEach(function(e){e.classList.remove('on')});if(on)[p.a,p.b,srcG[p.si],outG[p.oi]].forEach(function(e){e.classList.add('on')})}
+function newPacket(){var si=Math.floor(Math.random()*6),oi=Math.floor(Math.random()*3);var p={si:si,oi:oi,a:inP[si],b:outP[oi],t:0,glow:el('circle',{r:8,fill:'#fbfcfa',opacity:.25}),dot:el('circle',{r:4,fill:'#fbfcfa'})};hl(p,1);packets.push(p);return p}
+function ease(u){return u<.5?2*u*u:1-Math.pow(-2*u+2,2)/2}
+function place(p){var path=p.t<1?p.a:p.b,u=ease(Math.min(1,p.t<1?p.t:p.t-1)),pt=path.getPointAtLength(u*path.getTotalLength());
+ [p.dot,p.glow].forEach(function(e){e.setAttribute('cx',pt.x);e.setAttribute('cy',pt.y)});var col=p.t<1?'#fbfcfa':LIME;p.dot.setAttribute('fill',col);p.glow.setAttribute('fill',col)}
+function frame(ts){if(!run)return;var dt=last?Math.min(50,ts-last):16;last=ts;
+ spawn-=dt;if(spawn<=0){newPacket();spawn=1400}
+ tagClock-=dt;if(tagClock<=0){tag.setAttribute('opacity',0);setTimeout(function(){setTag();tag.setAttribute('opacity',1)},520);tagClock=3400}
+ if(pulseT>=0){pulseT+=dt;var k=pulseT/900,c=pulse.c,g=10*k;pulse.setAttribute('x',c.x-c.s/2-g);pulse.setAttribute('y',c.y-c.s/2-g);pulse.setAttribute('width',c.s+2*g);pulse.setAttribute('height',c.s+2*g);pulse.setAttribute('rx',28+g);pulse.setAttribute('opacity',Math.max(0,.6*(1-k)));if(k>=1)pulseT=-1}
+ packets=packets.filter(function(p){var b=p.t;p.t+=dt/1800;if(b<1&&p.t>=1&&pulseT<0)pulseT=0;
+  if(p.t>=2){var g=outG[p.oi];g.n++;g.cnt.textContent=fmt(g.n);if(p===packets[packets.length-1])hl(p,0);p.dot.remove();p.glow.remove();return false}place(p);return true});
+ requestAnimationFrame(frame)}
+function staticFrame(){var p=newPacket();p.si=1;p.t=.65;hl(p,0);p.a=inP[1];p.b=outP[2];p.si=1;p.oi=2;hl(p,1);place(p);ci=2;setTag();tag.setAttribute('opacity',1)}
+build();if(RM)staticFrame();
+window.addEventListener('resize',function(){var m=mode;build();if(m!==mode){tagClock=0;if(RM)staticFrame()}});
+if(!RM){if('IntersectionObserver' in window){new IntersectionObserver(function(es){var on=es[0].isIntersecting;if(on&&!run){run=true;last=0;requestAnimationFrame(frame)}else if(!on)run=false},{threshold:.05}).observe(svg)}else{run=true;requestAnimationFrame(frame)}}
+})();
+</script>
 
-      <section class="principles section" aria-labelledby="principles-title">
-        <div class="section-label"><span class="section-number">03 /</span> BUILT ON TRUST</div>
-        <div class="principles-content"><h2 id="principles-title">Intelligence at work.<br>Judgment in your hands.</h2><div class="principles-grid">
-          <article><div class="principle-diagram" aria-hidden="true"><span class="mini-evidence"><i></i><i></i><i></i><b>✓</b></span></div><h3>Evidence before action.</h3><p>Know where a number came from and why a dispute is worth pursuing. Clear reasoning, grounded in your documents.</p></article>
-          <article><div class="principle-diagram" aria-hidden="true"><span class="mini-control"><i></i><b>✓</b><i></i></span></div><h3>You stay in control.</h3><p>Review the recommendation. Correct the details. Approve the case. Your team makes the calls that matter.</p></article>
-          <article><div class="principle-diagram" aria-hidden="true"><span class="mini-trace"><i></i><i></i><i></i><b>↗</b></span></div><h3>Recovery you can trace.</h3><p>Follow a claim from notice to resolution, with a record of the evidence, decisions, and outcome.</p></article>
-        </div></div>
-      </section>
 
-      <section class="calculator" id="calculator" aria-labelledby="calculator-title">
-        <div class="calculator-heading"><div class="section-label"><span class="section-number">04 /</span> THE POSSIBILITIES</div><h2 id="calculator-title">What could come<br>back to your business?</h2><p>Put a number on the opportunity.<br>Adjust the assumptions to explore your recovery potential.</p></div>
-        <div class="calculator-grid">
-          <form id="recovery-form" class="calculator-inputs"><fieldset disabled><legend class="sr-only">Recovery scenario inputs</legend>
-            <div class="calc-control"><div><label for="calc-sales">Annual retail sales</label><output id="calc-sales-value" for="calc-sales">$10M</output></div><input id="calc-sales" type="range" min="100000" max="50000000" step="100000" value="10000000"><div class="range-ends"><span>$100k</span><span>$50M</span></div></div>
-            <div class="calc-control"><div><label for="calc-deductions">Sales deducted by retailers</label><output id="calc-deductions-value" for="calc-deductions">5%</output></div><input id="calc-deductions" type="range" min="0" max="1500" step="25" value="500"><div class="range-ends"><span>0%</span><span>15%</span></div></div>
-            <div class="calc-control"><div><label for="calc-recovery">Share of deductions recovered</label><output id="calc-recovery-value" for="calc-recovery">20%</output></div><input id="calc-recovery" type="range" min="0" max="100" step="1" value="20"><div class="range-ends"><span>0%</span><span>100%</span></div></div>
-            <details class="calc-assumptions"><summary>Include a fee assumption <span aria-hidden="true">+</span></summary><div class="calc-control"><div><label for="calc-fee">Recovery fee</label><output id="calc-fee-value" for="calc-fee">0%</output></div><input id="calc-fee" type="range" min="0" max="100" value="0" step="1"><p>Set your own scenario. The default of 0% excludes fees; this is not a pricing quote.</p></div></details>
-          </fieldset><noscript><p>Enable JavaScript to adjust this example scenario.</p></noscript></form>
-          <div class="calculator-result" aria-live="polite" aria-atomic="true"><div class="result-topline"><span>ANNUAL RECOVERY POTENTIAL</span><span aria-hidden="true">↗</span></div><div class="result-amount" id="result-recovered">$100,000</div><p class="result-caption">Estimated cash recovered, before fees</p><div id="recovery-meter" class="recovery-meter" aria-hidden="true"><span></span></div><dl><div><dt>Estimated annual deductions</dt><dd id="result-deductions">$500,000</dd></div><div><dt>Fee at your selected rate</dt><dd id="result-fee">$0</dd></div><div class="net-row"><dt>Recovery after selected fee</dt><dd id="result-net">$100,000</dd></div></dl><a class="calculator-cta" href="https://calendly.com/parthpahuja/mozart-intro-call">Let’s explore your numbers <span aria-hidden="true">↗</span></a></div>
-        </div>
-        <div class="calculator-note"><p id="calc-formula">$10M annual retail sales × 5% deductions × 20% recovered</p></div>
-      </section>
-
-      <section class="faq section" id="faq" aria-labelledby="faq-title">
-        <div class="faq-heading"><div class="section-label"><span class="section-number">05 /</span> A FEW MORE NOTES</div><h2 id="faq-title">Questions.<br>Clear answers.</h2><p>The short answers are here.<br>Let’s talk through the rest.</p><a class="faq-contact" href="mailto:start@mozart.financial">Talk to our team <span aria-hidden="true">↗</span></a></div>
-        <div class="faq-content">
-<details class="faq-item" data-keywords="platform product recovery recover deductions brands overview"><summary>What does Mozart do?<span class="faq-chevron" aria-hidden="true"></span></summary><div class="faq-answer"><p>Mozart automates deduction recovery, from finding disputes to updating your books. Our agents log in to your retailer portals, gather evidence, and submit appeals with your approval. Connected accounting and ERP systems keep every recovery reconciled, so your team spends less time chasing deductions.</p></div></details>
-<details class="faq-item" data-keywords="start started upload documents files email invoice invoices remittance proof delivery requirements onboarding"><summary>What do I need to get started?<span class="faq-chevron" aria-hidden="true"></span></summary><div class="faq-answer"><p>We’ll help you connect the places where your files and records already live—from shared folders and databases to your accounting or ERP system—and set up retailer access. You choose what Mozart can access, so there’s less to gather and upload.</p></div></details>
-<details class="faq-item" data-keywords="quickbooks qbo intuit accounting integration integrations connect connected connection erp"><summary>Does Mozart connect to my accounting or ERP system?<span class="faq-chevron" aria-hidden="true"></span></summary><div class="faq-answer"><p>Mozart brings your accounting, ERP, and retailer records together to match deductions, track disputes, and reconcile recoveries. Tell us what your team uses—we’ll confirm the right connections and help you get set up. You stay in control of access and accounting changes.</p></div></details>
-<details class="faq-item" data-keywords="automatic automatically autonomous approval approve submits submit submission disputes human control writeback writeoffs settlements"><summary>Does Mozart submit disputes automatically?<span class="faq-chevron" aria-hidden="true"></span></summary><div class="faq-answer"><p>Yes—with your approval. Mozart handles the full process: finding deductions, gathering evidence, submitting appeals, following up, and reconciling recoveries in your accounting system. Your team simply says yes or no to the proposed actions. We take care of the rest.</p></div></details>
-<details class="faq-item" data-keywords="data privacy security secure stored storage retention ai train training confidential information safe"><summary>How is my data used?<span class="faq-chevron" aria-hidden="true"></span></summary><div class="faq-answer"><p>Your records are used to deliver the service, including reconciliation, evidence preparation, and support. Relevant documents may be processed by OCR and AI providers. Read our Privacy Policy for details on sharing, retention, and your choices. <a href="/privacy">Read the Privacy Policy ↗</a></p></div></details>
-<details class="faq-item" data-keywords="cost costs price prices pricing fee fees paid payment pay charge charges contingency expensive free"><summary>How much does it cost?<span class="faq-chevron" aria-hidden="true"></span></summary><div class="faq-answer"><p>Pricing and any contingency fee are agreed before paid work begins. Your service agreement defines the rate and which recoveries are billable. Get in touch to discuss your deduction volume and workflow.</p></div></details>
-          <div class="faq-call"><p>Want to learn more?</p><a class="faq-call-button" href="https://calendly.com/parthpahuja/mozart-intro-call">Schedule a call <span aria-hidden="true">↗</span></a></div>
-        </div>
-      </section>
-
-      <section class="contact section" id="contact" aria-labelledby="contact-title">
-        <div class="section-label"><span class="section-number">06 /</span> WHAT COMES NEXT</div>
-        <div class="contact-content"><span class="eyebrow">IN DEVELOPMENT. BUILT WITH FINANCE TEAMS.</span><h2 id="contact-title">Let’s put your revenue <br>back where it belongs.</h2><p>We’re building a better way for brands to recover deductions. <br>If this is a problem your team knows well, let’s talk.</p><a class="contact-cta" id="contact-cta" href="https://calendly.com/parthpahuja/mozart-intro-call">Get in touch <span aria-hidden="true">↗</span></a><a class="contact-email" id="contact-email" href="mailto:start@mozart.financial">Prefer email? start@mozart.financial</a></div>
-      </section>
-    </main>
-
-    <footer><img class="footer-landscape" src="/assets/revenue-landscape.jpg" alt="" loading="lazy" width="1536" height="1024"><div class="footer-top"><a class="footer-brand" href="#" aria-label="Mozart Financial, back to top">mozart<span>.</span></a><span>EVERY DOLLAR.<br>IN HARMONY.</span></div><nav class="footer-links" aria-label="Footer links"><a href="/careers">Careers</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms &amp; EULA</a></nav><div class="footer-bottom"><span>© <span id="year">2026</span> Mozart Financial</span><a href="#">Back to top ↑</a></div></footer>
-  </body>
-</html>
+<section class="final"><div class="sec-head"><h2>Stop writing off<br><span>short pays.</span></h2><div><p>A contingency fee on what is recovered. Low-volume customers pay per deduction.</p><a class="btn-l" href="https://calendly.com/parthpahuja/mozart-intro-call" target="_blank" rel="noopener" style="margin-top:24px;background:var(--navy);color:var(--lime)">Book a demo <span>↗</span></a></div></div></section>
+<footer class="footer"><div class="footer-brand">mozart<i>.</i></div><nav class="flinks" aria-label="Footer links"><a href="/careers">Careers</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms &amp; EULA</a><a href="mailto:start@mozart.financial">start@mozart.financial</a></nav><div class="footer-bottom"><span>© 2026 Mozart</span><a href="#">Back to top ↑</a></div></footer><script>
+(function(){
+var d=document,R=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+d.documentElement.classList.add('js');
+function $(r,s){return r.querySelector(s)}function $$(r,s){return Array.prototype.slice.call(r.querySelectorAll(s))}
+function timer(){var ids=[];return{at:function(ms,f){ids.push(setTimeout(f,R?0:ms))},clear:function(){ids.forEach(clearTimeout);ids=[]}}}
+function typeText(t,el,text,speed,at,done){if(R){el.textContent=text;done&&done();return}el.textContent='';var i=0;(function step(){i++;el.textContent=text.slice(0,i);if(i<text.length)t.at(speed,step);else done&&done()})()}
+var K={};
+K.find=function(el){var t=timer(),tag=$(el,'[data-count]'),rows=$$(el,'.row'),n=+tag.getAttribute('data-count');
+ function end(){tag.classList.remove('sync');tag.textContent=n+' found';rows.forEach(function(r){r.classList.remove('ix-off')})}
+ return{reset:function(){t.clear();tag.classList.add('sync');tag.textContent='Syncing QuickBooks…';rows.forEach(function(r){r.classList.add('ix-off')})},
+ play:function(){if(R)return end();rows.forEach(function(r,i){t.at(500+i*450,function(){r.classList.remove('ix-off')})});
+  for(var c=1;c<=n;c++)(function(c){t.at(300+c*150,function(){tag.textContent='Syncing QuickBooks… '+c})})(c);t.at(2500,end)},end:end}};
+K.source=function(el){var t=timer(),ok=$(el,'.ix-ok');
+ function run(){t.clear();el.classList.remove('drawing','pulse');void el.offsetWidth;el.classList.remove('pre');ok.style.opacity='0';
+  if(R){ok.style.opacity='';return}el.classList.add('drawing');t.at(800,function(){el.classList.add('pulse')});t.at(1150,function(){ok.style.opacity=''})}
+ $$(el,'.ix-amt,.ix-mk').forEach(function(b){b.addEventListener('click',run);b.addEventListener('mouseenter',function(){if(!el.classList.contains('drawing')||!t.busy)run()})});
+ return{reset:function(){t.clear();el.classList.remove('drawing','pulse');el.classList.add('pre');ok.style.opacity=''},play:run}};
+K.proof=function(el){var t=timer(),vs=$$(el,'.ix-v'),tag=$(el,'.ix-signed'),box=$(el,'.ix-att'),msg=$(el,'.ix-msg');
+ vs.forEach(function(v){v.setAttribute('data-v',v.textContent)});
+ function end(){vs.forEach(function(v){v.textContent=v.getAttribute('data-v');v.classList.remove('pending')});tag.classList.remove('off');box.classList.remove('busy');msg.textContent='Attached to case WM-22-4471'}
+ return{reset:function(){t.clear();vs.forEach(function(v){v.textContent='-';v.classList.add('pending')});tag.classList.add('off');box.classList.add('busy');msg.textContent='Signing in to fedex.com…'},
+ play:function(){if(R)return end();t.at(1100,function(){tag.classList.remove('off');msg.textContent='Looking up 7714 2290 3318…'});
+  vs.forEach(function(v,i){t.at(2000+i*220,function(){v.textContent=v.getAttribute('data-v');v.classList.remove('pending')})});
+  t.at(3000,function(){box.classList.remove('busy');msg.textContent='Attached to case WM-22-4471'})},end:end}};
+K.file=function(el){var t=timer(),st=$(el,'.ix-st'),ap=$(el,'.ix-approve'),rv=$(el,'.ix-review'),pk=$(el,'.ix-pk'),pr=$(el,'.ix-prog'),chip=$(el,'.ix-filed');
+ ap.addEventListener('click',function(){if(ap.disabled)return;ap.disabled=true;st.textContent='Filing';pr.hidden=false;pr.classList.add('run');
+  t.at(1500,function(){pr.hidden=true;pr.classList.remove('run');st.textContent='Filed';chip.classList.remove('off')})});
+ rv.addEventListener('click',function(){pk.hidden=!pk.hidden;rv.setAttribute('aria-expanded',String(!pk.hidden))});
+ return{reset:function(){t.clear();ap.disabled=false;st.textContent='Ready for approval';pr.hidden=true;pr.classList.remove('run');chip.classList.add('off')},play:function(){}}};
+var QA=[
+ {q:'Why is Sysco short-paying invoice 120324?',html:'Sysco paid $968.75 less, coded <b style="font-weight:600">pricing</b>. Their remittance bills at the old $41.20 case price; your Aug 1 price letter set $44.95.',src:['Sysco remittance · p.1','Price letter Aug 1']},
+ {q:'What does Walmart code 22 mean?',html:'Code 22 is a <b style="font-weight:600">shortage</b>: Walmart says fewer cases arrived than you billed. On invoice 118842 they took $4,812.40, but the FedEx proof of delivery shows 48 of 48 pieces signed for at DC 6094.',src:['Walmart remittance · p.2','FedEx POD 7714 2290 3318']},
+ {q:'How much did UNFI deduct last month?',html:'UNFI deducted $2,140.00 last month, all of it one <b style="font-weight:600">MCB promo</b> chargeback on invoice 119207. The packet is built and waiting for your approval.',src:['UNFI remittance · Sep','Promo agreement']}];
+K.ask=function(el){var t=timer(),qb=$(el,'.ix-q'),body=$(el,'.ix-body'),chips=$$(el,'.ix-qc'),cur=0;
+ function src(a){return '<div class="ix-srcs">'+a.src.map(function(s){return '<span class="src">▤ '+s+'</span>'}).join('')+'</div>'}
+ function ask(i){t.clear();cur=i;var a=QA[i];chips.forEach(function(c,j){c.setAttribute('aria-pressed',String(j===i))});
+  if(R){qb.textContent=a.q;body.innerHTML=a.html+src(a);return}
+  body.innerHTML='<span class="ix-typing" aria-label="Mozart is typing"><i></i><i></i><i></i></span>';
+  typeText(t,qb,a.q,22,0,function(){t.at(800,function(){var p=d.createElement('span');body.innerHTML='';body.appendChild(p);
+   var plain=a.html.replace(/<[^>]+>/g,'');typeText(t,p,plain,12,0,function(){body.innerHTML=a.html+src(a);var s=$(body,'.ix-srcs');s.classList.add('off');t.at(30,function(){s.classList.remove('off')})})})})}
+ chips.forEach(function(c,i){c.addEventListener('click',function(){ask(i)})});
+ return{reset:function(){t.clear()},play:function(){ask(cur)}}};
+K.filter=function(el){var bs=$$(el,'.ix-seg button'),rows=$$(el,'[data-k]'),badge=$(el,'.ix-badge'),all=badge.textContent;
+ function set(f){bs.forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-f')===f))});var n=0;
+  rows.forEach(function(r){var on=f==='all'||r.getAttribute('data-k')===f;r.classList.toggle('ix-hide',!on);r.setAttribute('aria-hidden',String(!on));if(on)n++});
+  badge.textContent=f==='all'?all:n+' of '+rows.length+' shown'}
+ bs.forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute('data-f'))})});
+ return{reset:function(){set('all')},play:function(){}}};
+K.harness=function(el){var fl=$(el,'.fl'),iv=null,n=0,
+ IC={mail:'M2 4h12v8H2z M2 4l6 4.5L14 4',cart:'M1.5 2.5h2l1.6 7h7l1.4-5H4.5 M6 13h.1 M11 13h.1',truck:'M1 4h8v6H1z M9 6h2.5L14 8.5V10H9 M4 12.5h.1 M11 12.5h.1',bank:'M1.5 6L8 2l6.5 4z M3 7.5v4 M6 7.5v4 M10 7.5v4 M13 7.5v4 M1.5 13.5h13',box:'M2 5l6-3 6 3v6l-6 3-6-3z M2 5l6 3 6-3 M8 8v6'},
+ POOL=[['cart','Walmart short pay','$1,000.00',['Proof of delivery pulled','Dispute filed on Walmart','Credit received'],0],
+ ['mail','Northline Health, 38 of 40 hours','$1,640.00',['Timesheets matched','Waiting for your approval','Disputed with client'],1],
+ ['truck','Brightway Freight bill','$2,310.00',['Matched to PO and receipt','Credit requested','Credit received'],1],
+ ['bank','Sysco payment, 12 invoices','$48,210.00',['Reading remittance','Matched and applied'],1],
+ ['box','UNFI chargeback','$2,140.00',['Promo agreement found','Waiting for your approval','Filed on UNFI']],
+ ['cart','Kroger promo billback','$812.00',['Billback matched to deal','Disputed','Credit received']]],next=4;
+ function pillHTML(it){var d=it[4]>=it[3].length-1;return (d?'<i>✓</i>':'')+it[3][it[4]]}
+ function row(it){var r=d.createElement('div');r.className='fr';r.it=it;r.innerHTML='<span class="fi"><svg viewBox="0 0 16 16"><path d="'+IC[it[0]]+'"/></svg></span><div><div class="ft">'+it[1]+'</div><span class="fp">'+pillHTML(it)+'</span></div><span class="fa">'+it[2]+'</span>';return r}
+ function lay(){$$(fl,'.fr:not(.gone)').forEach(function(r,i){r.style.top=(i*76)+'px'})}
+ function step(){n++;var rows=$$(fl,'.fr:not(.gone)');
+  if(n%3===0){var src=POOL[next++%POOL.length],it=[src[0],src[1],src[2],src[3],0];var r=row(it);r.classList.add('new');r.style.top='-76px';fl.insertBefore(r,fl.firstChild);var last=rows[rows.length-1];last.classList.add('gone');last.style.top='304px';requestAnimationFrame(function(){requestAnimationFrame(function(){r.classList.remove('new');lay()})});setTimeout(function(){last.remove()},520);return}
+  var c=rows.filter(function(r){return r.it[4]<r.it[3].length-1});if(!c.length)return;var r=c[Math.floor(Math.random()*c.length)],p=$(r,'.fp');
+  p.classList.add('fade');setTimeout(function(){r.it[4]++;p.innerHTML=pillHTML(r.it);p.classList.remove('fade')},450)}
+ return{reset:function(){clearInterval(iv);fl.innerHTML='';n=0;next=4;POOL.slice(0,4).forEach(function(x){fl.appendChild(row([x[0],x[1],x[2],x[3],x[4]]))});lay()},
+ play:function(){if(R)return;clearInterval(iv);iv=setInterval(step,3500)}}};
+K.cash=function(el){var t=timer(),ls=$$(el,'.cline'),m=$(el,'.cmsg'),h=$(el,'.ix-hand');
+ function end(){ls.forEach(function(l){l.classList.add('m')});m.textContent='4 invoices matched · $968.75 short on INV 120324';h.classList.remove('off');h.style.opacity=''}
+ return{reset:function(){t.clear();ls.forEach(function(l){l.classList.remove('m')});m.textContent='Matching to open invoices…';h.style.opacity='0'},
+ play:function(){if(R)return end();ls.forEach(function(l,i){t.at(500+i*500,function(){l.classList.add('m')})});t.at(2700,end)}}};
+K.pay=function(el){var t=timer(),ls=$$(el,'.cline'),b=$(el,'.ix-credit');
+ function end(){ls.forEach(function(l){l.classList.add('m')})}
+ b.addEventListener('click',function(){if(b.disabled)return;b.disabled=true;b.innerHTML='Requesting…';t.at(1100,function(){b.innerHTML='Credit requested <i>✓</i>'})});
+ return{reset:function(){t.clear();ls.forEach(function(l){l.classList.remove('m')});b.disabled=false;b.innerHTML='Request credit <i>↗</i>'},
+ play:function(){if(R)return end();ls.forEach(function(l,i){t.at(400+i*500,function(){l.classList.add('m')})})}}};
+var cards=$$(d,'[data-ix]').map(function(el){var c=K[el.getAttribute('data-ix')](el);c.el=el;c.reset();
+ var b=d.createElement('button');b.type='button';b.className='ix-replay';b.textContent='Replay ↻';b.setAttribute('aria-label','Replay animation');
+ b.addEventListener('click',function(){c.reset();c.play()});el.appendChild(b);return c});
+var feats=$$(d,'.feat,.uh');
+if(!('IntersectionObserver' in window)){cards.forEach(function(c){c.play()});feats.forEach(function(f){f.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);
+ if(e.target.classList.contains('feat')||e.target.classList.contains('uh'))e.target.classList.add('in');else cards.forEach(function(c){if(c.el===e.target)c.play()})})},{threshold:.35});
+cards.forEach(function(c){io.observe(c.el)});feats.forEach(function(f){io.observe(f)});
+})();
+</script>
+</body></html>
