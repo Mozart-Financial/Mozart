@@ -219,7 +219,7 @@ body[data-wf=ded] .cashonly,body[data-wf=ded] .payonly,body[data-wf=cash] .dedon
 @media (prefers-reduced-motion:reduce){.nd,.rec{opacity:1;transform:none;transition:none}}
 </style></head>
 <body data-wf="ded"><div class="wrap">
-<header class="nav"><a class="brand" href="/" aria-label="Mozart Financial home">mozart<b>.</b></a><nav class="nav"><a class="home" href="/product">Product</a><a class="home" href="/#under">How it works</a><a class="cta" href="https://calendly.com/parthpahuja/mozart-intro-call" target="_blank" rel="noopener">Book a demo <span>&rarr;</span></a></nav></header>
+<header class="nav"><a class="brand" href="/" aria-label="Mozart Financial home">mozart<b>.</b></a><nav class="nav"><a class="home" href="/product">Product</a><a class="home" href="/#under">How it works</a><a class="cta" href="https://calendly.com/parthpahuja/mozart-intro-call" target="_blank" rel="noopener">Book a demo <span>&nearr;</span></a></nav></header>
 <div class="hero"><p class="section-label" style="margin-top:22px"><span class="section-number">01 /</span>Product</p>
 <div class="herorow"><h1 style="margin:0">Deductions, cash application and payables, in one place.</h1></div>
 <p class="sub" style="margin-top:20px">Same connections, same approvals, same audit trail. Pick one and click through.</p>
@@ -328,24 +328,25 @@ function pill(x,y,w,h,label,icon,out,count){var g=el('g',{'class':'pl'+(out?' ou
  var t=el('text',{x:tx,y:y+h/2+5,'font-size':V?12:14},g);t.textContent=label;
  if(out){var c=el('text',{x:x+w-14,y:y+h/2+5,'text-anchor':'end','font-size':V?12:14,'class':'cnt'},g);c.textContent=fmt(count);g.cnt=c;g.n=count}
  return g}
-function build(){var w=sec.clientWidth,v=w<700?'v':'h';if(v===mode)return;mode=v;V=v==='v';svg.innerHTML='';packets=[];inP=[];outP=[];srcG=[];outG=[];ticks=0;ci=0;
+function build(){var w=sec.clientWidth,v=w<700?(window.matchMedia&&matchMedia('(max-width:600px)').matches?'c':'v'):'h';if(v===mode)return;mode=v;V=v!=='h';svg.innerHTML='';packets=[];inP=[];outP=[];srcG=[];outG=[];ticks=0;ci=0;
  var W,H,c,src=[],out=[],rec;
  if(!V){W=1200;H=440;c={x:600,y:220,s:124};SRC.forEach(function(s,i){src.push({x:20,y:20+i*72,w:170,h:38,ax:190,ay:39+i*72})});OUT.forEach(function(s,i){out.push({x:960,y:101+i*100,w:220,h:38,ax:960,ay:120+i*100})});rec={x1:440,x2:760,y:420}}
  else{W=360;H=710;c={x:180,y:390,s:110};SRC.forEach(function(s,i){var col=i<3?0:1,row=i%3;src.push({x:col?212:8,y:10+row*56,w:140,h:36,ax:col?212:148,ay:28+row*56})});OUT.forEach(function(s,i){out.push({x:4+i*120,y:640,w:112,h:56,ax:60+i*120,ay:640})});rec={x1:40,x2:320,y:770}}
+ if(v==='c'){W=360;H=414;c={x:180,y:200,s:84};src=[];out=[];SRC.forEach(function(s,i){var col=i<3?0:1,row=i%3;src.push({x:col?214:6,y:4+row*44,w:140,h:34,ax:col?214:146,ay:21+row*44})});OUT.forEach(function(s,i){out.push({x:2+i*120,y:312,w:116,h:56,ax:60+i*120,ay:312})})}
  svg.setAttribute('viewBox','0 0 '+W+' '+H);
  var lg=el('g',{});var half=c.s/2;
  src.forEach(function(p){var d;if(!V)d='M'+p.ax+','+p.ay+' C'+(p.ax+230)+','+p.ay+' '+(c.x-half-200)+','+c.y+' '+(c.x-half)+','+c.y;
-  else{var mx=p.ax<180?163:197;d='M'+p.ax+','+p.ay+' C'+mx+','+p.ay+' '+mx+','+p.ay+' '+mx+','+(p.ay+20)+' S'+c.x+','+(c.y-half-70)+' '+c.x+','+(c.y-half)}
+  else{var mx=p.ax<180?163:197;d='M'+p.ax+','+p.ay+' C'+mx+','+p.ay+' '+mx+','+p.ay+' '+mx+','+(p.ay+20)+' S'+c.x+','+(c.y-half-(v==='c'?30:70))+' '+c.x+','+(c.y-half)}
   inP.push(el('path',{d:d,'class':'ln i'},lg))});
  out.forEach(function(p){var d;if(!V)d='M'+(c.x+half)+','+c.y+' C'+(c.x+half+200)+','+c.y+' '+(p.ax-230)+','+p.ay+' '+p.ax+','+p.ay;
-  else d='M'+c.x+','+(c.y+half)+' C'+c.x+','+(c.y+half+80)+' '+p.ax+','+(p.ay-90)+' '+p.ax+','+p.ay;
+  else d='M'+c.x+','+(c.y+half)+' C'+c.x+','+(c.y+half+(v==='c'?30:80))+' '+p.ax+','+(p.ay-(v==='c'?35:90))+' '+p.ax+','+p.ay;
   outP.push(el('path',{d:d,'class':'ln o'},lg))});
  src.forEach(function(p,i){srcG.push(pill(p.x,p.y,p.w,p.h,SRC[i][0],SRC[i][1]))});
  out.forEach(function(p,i){outG.push(pill(p.x,p.y,p.w,p.h,OUT[i][0],null,1,OUT[i][1]))});
  pulse=el('rect',{x:c.x-half,y:c.y-half,width:c.s,height:c.s,rx:28,fill:'none',stroke:LIME,'stroke-width':1.2,opacity:0});
  core=el('rect',{x:c.x-half,y:c.y-half,width:c.s,height:c.s,rx:28,fill:NAVY,stroke:'#fbfcfa','stroke-width':1.5});
  var m=el('text',{x:c.x,y:c.y+8,'text-anchor':'middle','font-size':V?22:25,'font-weight':700,fill:'#fbfcfa','letter-spacing':'-1'});m.innerHTML='mozart<tspan fill="'+LIME+'">.</tspan>';
- tag=el('g',{'class':'tag',opacity:0});tagR=el('rect',{y:c.y-half-46,height:30,rx:15,fill:'#fbfcfa'},tag);tagT=el('text',{y:c.y-half-26,'text-anchor':'middle','font-size':13,fill:NAVY},tag);tag.cx=c.x;
+ var ty=v==='c'?380:c.y-half-46;tag=el('g',{'class':'tag',opacity:0});tagR=el('rect',{y:ty,height:30,rx:15,fill:'#fbfcfa'},tag);tagT=el('text',{y:ty+20,'text-anchor':'middle','font-size':13,fill:NAVY},tag);tag.cx=c.x;
  
  
  
@@ -374,8 +375,8 @@ if(!RM){if('IntersectionObserver' in window){new IntersectionObserver(function(e
 </script>
 
 
-<div class="band"><div class="wrap" style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap"><h2 style="margin:0">See your own short pays on a call.</h2><a class="cta" href="https://calendly.com/parthpahuja/mozart-intro-call" target="_blank" rel="noopener">Book a demo <span>&rarr;</span></a></div></div>
-<footer class="ffoot"><div class="wrap"><div class="footer-top"><a class="footer-brand" href="/">mozart<span>.</span></a><span>EVERY DOLLAR.<br>IN HARMONY.</span></div><nav class="flinks" aria-label="Footer links"><a href="/careers">Careers</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms &amp; EULA</a><a href="mailto:start@mozart.financial">start@mozart.financial</a></nav><div class="footer-bottom"><span>&copy; 2026 Mozart</span><span>Product screens are illustrative.</span><a href="#">Back to top &uarr;</a></div></div></footer>
+<div class="band"><div class="wrap" style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap"><h2 style="margin:0">See your own short pays on a call.</h2><a class="cta" href="https://calendly.com/parthpahuja/mozart-intro-call" target="_blank" rel="noopener">Book a demo <span>&nearr;</span></a></div></div>
+<footer class="ffoot"><div class="wrap"><div class="footer-top"><a class="footer-brand" href="/">mozart<span>.</span></a><span>EVERY DOLLAR.<br> IN HARMONY.</span></div><nav class="flinks" aria-label="Footer links"><a href="/careers">Careers</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms &amp; EULA</a><a href="mailto:start@mozart.financial">start@mozart.financial</a></nav><div class="footer-bottom"><span>&copy; 2026 Mozart</span><span>Product screens are illustrative.</span><a href="#">Back to top &uarr;</a></div></div></footer>
 <script>
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches,cur={ded:0,cash:0,pay:0},timer;
 function wf(){return document.body.dataset.wf}
@@ -394,4 +395,31 @@ document.getElementById('approve').onclick=function(){var b=this;clearInterval(t
 
 document.getElementById('credit').onclick=function(){var b=this;clearInterval(timer);b.textContent='Requesting credit...';setTimeout(function(){document.getElementById('payActs').innerHTML='<span class="check">&#10003; Credit requested, $2,200.00 approved for payment</span>';setTimeout(function(){show('pay',2);auto()},rm?0:1800)},rm?0:900)};
 show('ded',0);auto();
-</script></body></html>
+</script><style>
+@media(max-width:600px){
+header.nav{height:72px}header.nav .brand{font-size:28px}
+.hero{padding-top:16px}.hero .section-label{margin-top:0!important}
+.tabs{display:flex;width:100%;flex-wrap:nowrap;margin-top:28px}.tab{flex:1 1 0;min-width:0;justify-content:center;padding:10px 2px;font-size:13px;white-space:nowrap}
+.scr[data-i="0"] .tw table tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;align-items:center;padding:11px 12px;border-bottom:1px solid #eef1f3}
+.scr[data-i="0"] .tw table tr:last-child{border-bottom:0}
+.scr[data-i="0"] .tw table tr:first-child{display:none}
+.scr[data-i="0"] .tw table td{padding:0;border:0;background:none}
+.scr[data-i="0"] .tw table td:last-child{justify-self:start}
+.panel[data-for=ded] .scr[data-i="0"] td:last-child{justify-self:end}
+.panel[data-for=pay] .scr[data-i="0"] td:last-child{grid-column:1/-1}
+.panel[data-for=pay] .scr[data-i="0"] .st{white-space:normal}
+.app{height:770px;min-height:0;align-content:start;overflow:hidden}.main{padding:16px 14px}.stepper{margin-bottom:14px}
+.case,.match{gap:12px}.case{margin-top:10px!important}.steps,.ev,.pay{padding:14px}.s{padding:6px 0}.doc{padding:10px}.big{font-size:26px}
+.tw th,.tw td{padding:9px 8px}.tw .num{white-space:normal}#tk td,#tk th{padding:7px 10px}.short{margin:10px}
+.spine2{margin-top:24px}
+.sp{border-top:0;border-left:2px solid var(--ink);padding:0 0 22px 22px;margin-left:6px}
+.sp:last-child{border-left-color:transparent;padding-bottom:0}
+.sp:after{top:0;left:-8px}
+.sp h3{margin:2px 0 4px;font-size:24px}
+.princ{flex-direction:column;gap:10px}
+.footer-top{flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:28px}
+.footer-top>span{font-size:11px;white-space:nowrap}.footer-top>span br{display:none}
+.ffoot .footer-bottom{flex-direction:column;gap:12px;margin-top:32px}
+}
+</style>
+</body></html>
