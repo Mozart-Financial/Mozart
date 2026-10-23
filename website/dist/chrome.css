@@ -42,3 +42,5 @@ header.hdr{display:block;padding:0}
 @media (max-width:600px){.foot{min-height:340px;padding-block:45px 25px}.foot .land{object-position:65% 70%;opacity:.24}.ftop{margin-bottom:40px;gap:15px}.fbrand{font-size:22vw}.ftop > span{font-size:9px;letter-spacing:.7px}.flinks{padding:28px 0;gap:10px 18px}.flinks a{font-size:11px}}
 footer.foot{padding-left:0;padding-right:0}
 .foot p{margin:0}
+
+body{zoom:.9}

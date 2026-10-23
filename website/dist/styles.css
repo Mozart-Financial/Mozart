@@ -35,3 +35,5 @@ input,select,textarea{font-family:inherit}
 
 /* 2026-10-23: header and footer line up with the homepage and integrations pages */
 .header,footer{padding-left:max(6%,calc((100vw - 1850px)/2));padding-right:max(6%,calc((100vw - 1850px)/2))}
+
+body{zoom:.9}
