@@ -1,5 +1,5 @@
 // Confirmed contact destination for Mozart Financial.
-const CONTACT_URL = 'https://calendly.com/parthpahuja/mozart-intro-call';
+const CONTACT_URL = 'https://calendly.com/mozartfinancial/mozart-intro-call-clone';
 const CONTACT_LABEL = 'Prefer email? start@mozart.financial';
 document.querySelector('#contact-cta').href = CONTACT_URL;
 document.querySelector('#contact-email').textContent = CONTACT_LABEL;
