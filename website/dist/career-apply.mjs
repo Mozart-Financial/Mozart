@@ -1,8 +1,7 @@
 const titles = {
   'founding-engineering-intern': 'Founding Engineering Intern',
-  'deductions-accounting-frameworks-intern': 'Deductions & Accounting Frameworks Intern',
   'founding-engineer': 'Founding Engineer',
-  'founding-deductions-accounting-lead': 'Founding Deductions & Accounting Lead',
+  'forward-deployed-engineer': 'Forward Deployed Engineer',
   'founding-sdr': 'Founding SDR'
 };
 const slug = new URLSearchParams(location.search).get('role');

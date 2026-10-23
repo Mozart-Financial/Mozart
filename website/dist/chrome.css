@@ -1,0 +1,44 @@
+/* Shared header and footer for pages without the site stylesheet (privacy, terms). */
+.hdr,.foot{--navy:#111b30;--navy-light:#1b2943;--paper:#f3f5f5;--white:#fbfcfa;--lime:#d7f56c;--lime-soft:#eef8cf;--muted:#afb8c8;--line:#384256;--ink2:#556071;--bd:#dfe4e6;--card:#e8ecec;--card-bd:#d9dfe0;--dot:#d3dadb;--green:#466626;--olive:#647047;--pill:#eef1f3;--hover-bd:#b8bcc4;color-scheme:light}
+header.hdr,footer.foot{max-width:none;margin:0;border:0;font-family:Helvetica,"Helvetica Neue",Arial,sans-serif;line-height:1.55;font-size:16px}
+header.hdr{display:block;padding:0}
+.hdr a,.foot a{color:inherit}
+.hdr .tx{color:var(--muted)}
+.hdr .contact-link{color:var(--lime)}
+.hdr .contact-link:hover{color:var(--navy)}
+.foot .flinks a{color:#d4dce8}
+.foot .fbot a{color:var(--muted)}
+.hdr .wrap,.foot .wrap{padding-left:max(6vw,16px);padding-right:max(6vw,16px)}
+@media (min-width:2100px){.hdr .wrap,.foot .wrap{padding-left:calc((100vw - 1850px)/2);padding-right:calc((100vw - 1850px)/2)}}
+/* header (as on the careers page) */
+.hdr{background:var(--navy);color:var(--white)}
+.hdr .wrap{height:112px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-size:35px;letter-spacing:-2px;font-weight:700;display:flex;align-items:baseline;text-decoration:none;color:var(--white);line-height:1}
+.brand .p{color:var(--lime)}
+.brand .d{font-size:10px;font-weight:400;letter-spacing:1.7px;margin-left:14px}
+.hnav{display:flex;align-items:center;gap:40px;font-size:14px}
+.hnav a{text-decoration:none}
+.hnav .tx{color:var(--muted)}
+.hnav .tx:hover,.hnav .tx[aria-current="page"]{color:var(--lime)}
+.contact-link{display:flex;align-items:center;gap:42px;border:1px solid var(--olive);padding:13px 17px;color:var(--lime);transition:background .2s,color .2s}
+.contact-link:hover{background:var(--lime);color:var(--navy)}
+.contact-link span{font-size:20px;line-height:1}
+@media (max-width:900px){.hdr .wrap{height:92px}.brand .d{display:none}}
+@media (max-width:700px){.hnav .tx{display:none}}
+@media (max-width:600px){.hdr .wrap{height:88px}.brand{font-size:28px}.contact-link{padding:10px;gap:10px;font-size:13px}}
+/* footer (as on the careers page) */
+.foot{position:relative;isolation:isolate;overflow:hidden;min-height:440px;background:var(--navy);color:var(--white);padding-block:65px 28px}
+.foot .land{position:absolute;z-index:-2;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 65%;filter:grayscale(1);mix-blend-mode:screen;opacity:.2;pointer-events:none}
+.ftop{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:55px}
+.fbrand{font-size:clamp(70px,14vw,220px);font-weight:700;letter-spacing:-.07em;line-height:1;text-decoration:none;color:var(--white)}
+.fbrand span{color:var(--lime)}
+.ftop > span{font-size:12px;line-height:1.6;letter-spacing:1.4px;color:var(--muted)}
+.flinks{border-top:1px solid var(--line);padding:34px 0 38px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.flinks a{font-size:13px;color:#d4dce8;text-decoration:none}
+.flinks a:hover{color:var(--lime)}
+.fbot{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:24px;font-size:12px;color:var(--muted)}
+.fbot a{color:var(--muted);text-decoration:none}
+.fbot a:hover{color:var(--lime)}
+@media (max-width:600px){.foot{min-height:340px;padding-block:45px 25px}.foot .land{object-position:65% 70%;opacity:.24}.ftop{margin-bottom:40px;gap:15px}.fbrand{font-size:22vw}.ftop > span{font-size:9px;letter-spacing:.7px}.flinks{padding:28px 0;gap:10px 18px}.flinks a{font-size:11px}}
+footer.foot{padding-left:0;padding-right:0}
+.foot p{margin:0}

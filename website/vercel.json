@@ -52,6 +52,26 @@
       "source": "/eula",
       "destination": "/terms",
       "permanent": true
+    },
+    {
+      "source": "/product",
+      "destination": "/#solution",
+      "permanent": false
+    },
+    {
+      "source": "/product.html",
+      "destination": "/#solution",
+      "permanent": false
+    },
+    {
+      "source": "/careers/deductions-accounting-frameworks-intern",
+      "destination": "/careers",
+      "permanent": false
+    },
+    {
+      "source": "/careers/founding-deductions-accounting-lead",
+      "destination": "/careers",
+      "permanent": false
     }
   ]
 }

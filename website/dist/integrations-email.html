@@ -12,6 +12,7 @@
 <meta property="og:url" content="https://www.mozart.financial/integrations-email">
 <meta property="og:image" content="https://www.mozart.financial/assets/mozart-social-landscape-v1.jpg">
 <link rel="icon" href="/favicon.svg">
+<meta name="theme-color" content="#111b30">
 <style>
 :root{--navy:#111b30;--navy-light:#1b2943;--paper:#f3f5f5;--white:#fbfcfa;--lime:#d7f56c;--lime-soft:#eef8cf;--muted:#afb8c8;--line:#384256;--ink2:#556071;--bd:#dfe4e6;--card:#e8ecec;--card-bd:#d9dfe0;--dot:#d3dadb;--green:#466626;--olive:#647047;--pill:#eef1f3;--hover-bd:#b8bcc4;color-scheme:light}
 *{box-sizing:border-box}
@@ -28,16 +29,15 @@ a{color:inherit}
 .navy :focus-visible,.nav :focus-visible,.foot :focus-visible{outline-color:var(--lime)}
 .lime{color:var(--lime)}
 .grn{color:var(--green)}
-.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-@media (min-width:800px){.wrap{padding-left:max(5vw,env(safe-area-inset-left,0px));padding-right:max(5vw,env(safe-area-inset-right,0px))}}
-@media (min-width:1330px){.wrap{max-width:calc(1200px + 10vw)}}
-.band{padding-block:112px}
+.wrap{padding-left:max(6vw,16px,env(safe-area-inset-left,0px));padding-right:max(6vw,16px,env(safe-area-inset-right,0px))}
+@media (min-width:2100px){.wrap{padding-left:calc((100vw - 1850px)/2);padding-right:calc((100vw - 1850px)/2)}}
+.band{padding-block:115px}
 .navy{background:var(--navy);color:var(--white)}
 .paper{background:var(--paper)}
-.label{font-size:11px;letter-spacing:1.35px;text-transform:uppercase;color:var(--ink2);margin-bottom:22px;white-space:pre-wrap}
+.label{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--ink2);margin-bottom:22px;white-space:pre-wrap}
 .navy .label{color:var(--muted)}
-.lead{font-size:17px;color:var(--ink2);max-width:600px;margin-top:24px}
-.navy .lead{color:var(--muted)}
+.lead{font-size:19px;line-height:1.6;color:var(--ink2);max-width:640px;margin-top:24px}
+.navy .lead{color:#c8d0de}
 .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;align-items:center}
 .btn-l{display:inline-flex;align-items:center;gap:40px;background:var(--lime);color:var(--navy);padding:17px 22px;font-size:16px;text-decoration:none;border:1px solid var(--lime);transition:background .2s}
 .btn-l:hover{background:var(--white);border-color:var(--white)}
@@ -46,31 +46,22 @@ a{color:inherit}
 .cta-o{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--olive);color:var(--lime);padding:13px 17px;font-size:14px;text-decoration:none;transition:border-color .2s}
 .cta-o:hover{border-color:var(--lime)}
 .btns .cta-o{padding:17px 22px;font-size:16px}
-/* nav */
-.nav{position:sticky;top:0;z-index:50;background:var(--navy);color:var(--white);padding-top:env(safe-area-inset-top,0px)}
-.nav .wrap{height:64px;display:flex;align-items:center;gap:32px;position:relative}
-.logo{font-size:28px;font-weight:700;letter-spacing:-.04em;text-decoration:none;color:var(--white);line-height:1}
-.logo span{color:var(--lime)}
-.links{display:flex;gap:28px;margin-left:auto;min-width:0}
-.links a{text-decoration:none;font-size:14px;color:var(--muted)}
-.links a:hover,.links a[aria-current="page"]{color:var(--white)}
-.links a[aria-current="page"]{box-shadow:inset 0 -1px 0 var(--lime)}
-.menu-t{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
-.menu-l{display:none;font-size:14px;cursor:pointer;color:var(--white);padding:8px 12px;border:1px solid var(--line)}
-.menu-t:focus-visible + .menu-l{outline:2px solid var(--lime);outline-offset:2px}
-.strip{background:var(--navy);color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:10px;flex-wrap:wrap}
-.strip p{font-size:12px;min-width:0}
-.strip .steps5{font-size:11px;letter-spacing:1.35px;text-transform:uppercase}
-@media (max-width:799px){
- .nav .wrap{gap:12px}
- .menu-l{display:block;margin-left:auto;order:2}
- .nav .cta-o{order:3;padding:9px 12px}
- .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--navy);border-bottom:1px solid var(--line);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
- .links a{padding-block:14px;border-top:1px solid var(--line)}
- .menu-t:checked ~ .links{display:flex}
- .strip .steps5{display:none}
-}
+/* header (as on the careers page) */
+.hdr{background:var(--navy);color:var(--white)}
+.hdr .wrap{height:112px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-size:35px;letter-spacing:-2px;font-weight:700;display:flex;align-items:baseline;text-decoration:none;color:var(--white);line-height:1}
+.brand .p{color:var(--lime)}
+.brand .d{font-size:10px;font-weight:400;letter-spacing:1.7px;margin-left:14px}
+.hnav{display:flex;align-items:center;gap:40px;font-size:14px}
+.hnav a{text-decoration:none}
+.hnav .tx{color:var(--muted)}
+.hnav .tx:hover,.hnav .tx[aria-current="page"]{color:var(--lime)}
+.contact-link{display:flex;align-items:center;gap:42px;border:1px solid var(--olive);padding:13px 17px;color:var(--lime);transition:background .2s,color .2s}
+.contact-link:hover{background:var(--lime);color:var(--navy)}
+.contact-link span{font-size:20px;line-height:1}
+@media (max-width:900px){.hdr .wrap{height:92px}.brand .d{display:none}}
+@media (max-width:700px){.hnav .tx{display:none}}
+@media (max-width:600px){.hdr .wrap{height:88px}.brand{font-size:28px}.contact-link{padding:10px;gap:10px;font-size:13px}}
 /* ui vocabulary */
 .ui{background:var(--white);border:1px solid var(--bd);border-radius:8px;box-shadow:0 10px 30px rgba(17,27,48,.07),0 1px 2px rgba(17,27,48,.063);font-size:13px;color:var(--navy);min-width:0}
 .ui-h{font-weight:700;padding:14px 16px;border-bottom:1px solid var(--bd)}
@@ -101,15 +92,22 @@ a{color:inherit}
 .frame-bar{height:28px;display:flex;align-items:center;gap:6px;padding-left:12px;border-bottom:1px solid var(--bd)}
 .frame-bar i{width:9px;height:9px;border-radius:50%;background:var(--bd)}
 /* home hero */
-.hero{padding-block:96px 0}
-.hero .two{align-items:center}
-.hero h1{font-size:clamp(40px,4.3vw,64px)}
-.hero-txt{padding-bottom:96px}
-.hero-shot{margin-bottom:-60px;position:relative;z-index:2}
-.after-hero{padding-top:56px;padding-bottom:44px;text-align:center}
-.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.hero{padding-block:65px 80px}
+.hero .label{color:var(--lime)}
+.big1{font-size:clamp(56px,8.4vw,128px);letter-spacing:-.065em;line-height:1;margin:40px 0 50px}
+.hbot{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;border-top:1px solid var(--line);padding-top:30px}
+.hbot .lead{margin-top:0}
+.hbot .btns{margin-top:0;flex:none}
+.shotband{background:linear-gradient(var(--navy) 0 38%,var(--paper) 38% 100%)}
+.hero-shot{max-width:1500px;margin:0 auto}
+.after-hero{padding-top:64px;padding-bottom:20px;text-align:center}
+.sh{display:grid;grid-template-columns:27% minmax(0,1fr);gap:3%;align-items:start}
+.sh > *{min-width:0}
+.sh .label{padding-top:12px;margin-bottom:0}
+.sh h2{margin-bottom:0}
+.sh .lead{margin-top:28px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6%;align-items:center}
 .two > *{min-width:0}
-.hero .two{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
 .srcs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:20px;padding:0;list-style:none}
 .srcs li{font-size:11px;padding:4px 9px;border-radius:20px;background:var(--white);border:1px solid var(--bd);color:var(--ink2)}
 .prob p.t{color:var(--ink2);margin-top:16px;font-size:17px}
@@ -161,8 +159,10 @@ a{color:inherit}
 .closing p{max-width:640px;margin:20px auto 0;font-size:17px}
 .closing .btns{justify-content:center}
 /* integrations */
-.ihero{padding-block:88px 72px}
-.ihero h1{max-width:900px}
+.ihero{padding-block:65px 80px}
+.ihero .label{color:var(--lime)}
+.ihero .big1{max-width:1500px}
+.ihero .count{margin-top:0;flex:none}
 .count{margin-top:28px;display:inline-block;font-size:11px;letter-spacing:1.35px;text-transform:uppercase;color:var(--navy);background:var(--lime);padding:6px 10px;border-radius:20px}
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .grid2 > *{min-width:0}
@@ -197,32 +197,33 @@ a{color:inherit}
 .pn small{display:block;color:var(--ink2);font-size:13px;margin-top:4px}
 .pn .nx{text-align:right}
 .allc{text-align:center;margin-top:32px}
-/* footer */
-.foot{background:var(--navy);color:var(--white);padding-block:80px 32px}
-.foot .big{display:block;font-size:clamp(70px,14vw,200px);font-weight:700;letter-spacing:-.06em;line-height:.9;text-decoration:none;color:var(--white)}
-.foot .big span{color:var(--lime)}
-.foot .tagl{color:var(--muted);font-size:14px;margin-top:20px}
-.flinks{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:40px;padding:0;list-style:none;font-size:14px}
-.flinks a{color:var(--muted);text-decoration:none}
-.flinks a:hover{color:var(--white)}
-.flinks .mail{color:var(--white);user-select:all}
-.fbot{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:13px}
+/* footer (as on the careers page) */
+.foot{position:relative;isolation:isolate;overflow:hidden;min-height:440px;background:var(--navy);color:var(--white);padding-block:65px 28px}
+.foot .land{position:absolute;z-index:-2;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 65%;filter:grayscale(1);mix-blend-mode:screen;opacity:.2;pointer-events:none}
+.ftop{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:55px}
+.fbrand{font-size:clamp(70px,14vw,220px);font-weight:700;letter-spacing:-.07em;line-height:1;text-decoration:none;color:var(--white)}
+.fbrand span{color:var(--lime)}
+.ftop > span{font-size:12px;line-height:1.6;letter-spacing:1.4px;color:var(--muted)}
+.flinks{border-top:1px solid var(--line);padding:34px 0 38px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.flinks a{font-size:13px;color:#d4dce8;text-decoration:none}
+.flinks a:hover{color:var(--lime)}
+.fbot{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:24px;font-size:12px;color:var(--muted)}
 .fbot a{color:var(--muted);text-decoration:none}
-.fbot a:hover{color:var(--white)}
+.fbot a:hover{color:var(--lime)}
+@media (max-width:600px){.foot{min-height:340px;padding-block:45px 25px}.foot .land{object-position:65% 70%;opacity:.24}.ftop{margin-bottom:40px;gap:15px}.fbrand{font-size:22vw}.ftop > span{font-size:9px;letter-spacing:.7px}.flinks{padding:28px 0;gap:10px 18px}.flinks a{font-size:11px}}
 @media (max-width:999px){.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.flow{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:40px}.flow::before{display:none}}
-@media (max-width:799px){.two,.cards3,.steps,.notes{grid-template-columns:minmax(0,1fr)}.hero .two{grid-template-columns:minmax(0,1fr)}.two{gap:40px}.band{padding-block:72px}.grid2{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:600px){.hero-txt{padding-bottom:0}.hero{padding-bottom:56px}.hero-shot{margin-bottom:0}.after-hero{padding-top:48px}.pillars,.grid3,.pn{grid-template-columns:minmax(0,1fr)}.flow{grid-template-columns:minmax(0,1fr)}.stage{padding:22px}.logos8{gap:10px}.pn .nx{text-align:left}.btns a{width:100%;justify-content:space-between}}
+@media (max-width:799px){.two,.cards3,.steps,.notes,.sh{grid-template-columns:minmax(0,1fr)}.two{gap:40px}.sh{gap:0}.sh .label{padding-top:0;margin-bottom:22px}.band{padding-block:72px}.grid2{grid-template-columns:minmax(0,1fr)}.hbot{display:block}.hbot .btns{margin-top:28px}.big1{margin:30px 0 40px}}
+@media (max-width:600px){.hero{padding-block:45px 55px}.ihero{padding-block:45px 55px}.big1{font-size:clamp(44px,12.5vw,64px)}.shotband{background:linear-gradient(var(--navy) 0 30%,var(--paper) 30% 100%)}.after-hero{padding-top:48px}.hbot .lead{font-size:17px}.pillars,.grid3,.pn{grid-template-columns:minmax(0,1fr)}.flow{grid-template-columns:minmax(0,1fr)}.stage{padding:22px}.logos8{gap:10px}.pn .nx{text-align:left}.btns a{width:100%;justify-content:space-between}}
 </style>
 </head>
 <body id="top">
-<header class="nav"><div class="wrap"><a class="logo" href="/">mozart<span>.</span></a><input class="menu-t" type="checkbox" id="menu" aria-label="Menu"><label class="menu-l" for="menu">Menu</label><nav class="links" aria-label="Main"><a href="/#solution">Product</a><a href="/integrations" aria-current="page">Integrations</a><a href="/careers">Careers</a></nav><a class="cta-o" href="mailto:parth@mozart.financial">Book a demo &#8599;</a></div></header>
-<div class="strip"><div class="wrap"><p>Work between organizations, done.</p><p class="steps5">Find &middot; Prepare &middot; Act &middot; Follow up &middot; Record</p></div></div>
+<header class="hdr"><div class="wrap"><a class="brand" href="/" aria-label="Mozart Financial home">mozart<span class="p">.</span><span class="d">FINANCIAL</span></a><nav class="hnav" aria-label="Main navigation"><a class="tx" href="/#solution">Product</a><a class="tx" href="/integrations" aria-current="page">Integrations</a><a class="contact-link" href="https://calendly.com/parthpahuja/mozart-intro-call" target="_blank" rel="noopener">Book a demo <span aria-hidden="true">&#8599;</span></a></nav></div></header>
 <main>
 <div class="crumb"><div class="wrap"><a href="/integrations">Integrations &#8599;</a> / Email, documents and files</div></div>
 <section class="navy ihero"><div class="wrap">
 <p class="label">19 INTEGRATIONS</p>
-<h1>Email, documents and files</h1>
-<p class="lead">Most work between organizations arrives in an inbox. Mozart reads it there.</p>
+<h1 class="big1">Email, documents and files</h1>
+<div class="hbot"><p class="lead">Most work between organizations arrives in an inbox. Mozart reads it there.</p></div>
 <nav aria-label="Categories"><ul class="catp"><li><a href="/integrations-accounting">Accounting and finance systems</a></li><li><a href="/integrations-email" aria-current="page">Email, documents and files</a></li><li><a href="/integrations-communication">Communication</a></li><li><a href="/integrations-portals">Retailer and distributor portals</a></li><li><a href="/integrations-carriers">Carriers and logistics</a></li><li><a href="/integrations-edi">Supply chain networks and EDI</a></li><li><a href="/integrations-banks">Banks and payments</a></li><li><a href="/integrations-insurers">Insurers and claims</a></li><li><a href="/integrations-government">Government, tax and compliance</a></li><li><a href="/integrations-people">People, staffing and payroll</a></li><li><a href="/integrations-receivables">Collections, billing and receivables</a></li><li><a href="/integrations-legal">Legal, audit and advisers</a></li><li><a href="/integrations-data">Data, storage and automation</a></li></ul></nav>
 </div></section>
 <section class="paper band"><div class="wrap">
@@ -233,11 +234,9 @@ a{color:inherit}
 <section class="closing band center"><div class="wrap">
 <h2>Don't see your system? We'll add it.</h2>
 <p>Mozart connects to anything with an inbox, a portal or an interface.</p>
-<div class="btns"><a class="btn-l btn-n" href="mailto:parth@mozart.financial">Book a demo <span>&#8599;</span></a></div>
+<div class="btns"><a class="btn-l btn-n" href="https://calendly.com/parthpahuja/mozart-intro-call" target="_blank" rel="noopener">Book a demo <span>&#8599;</span></a></div>
 </div></section>
 </main>
-<footer class="foot" id="footer"><div class="wrap"><a class="big" href="/">mozart<span>.</span></a><p class="tagl">Orchestrating enterprise knowledge</p>
-<ul class="flinks"><li><a href="/careers">Careers</a></li><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms</a></li><li><a href="/integrations">Integrations</a></li><li class="mail">parth@mozart.financial</li></ul>
-<div class="fbot"><span>&copy; 2026 Mozart</span><a href="#top">Back to top &#8593;</a></div></div></footer>
+<footer class="foot"><img class="land" src="/assets/revenue-landscape.jpg" alt="" loading="lazy" width="1536" height="1024"><div class="wrap"><div class="ftop"><a class="fbrand" href="/" aria-label="Mozart Financial, back to top">mozart<span>.</span></a><span>ORCHESTRATING<br>ENTERPRISE WORKFLOWS.</span></div><nav class="flinks" aria-label="Footer links"><a href="/careers">Careers</a><a href="/integrations">Integrations</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms &amp; EULA</a></nav><div class="fbot"><span>&copy; 2026 Mozart Financial</span><a href="#top">Back to top &#8593;</a></div></div></footer>
 </body>
 </html>
