@@ -1,0 +1,224 @@
+{
+  "applicationEmail": "parth@mozart.financial",
+  "roles": [
+    {
+      "slug": "founding-engineering-intern",
+      "title": "Founding Engineering Intern",
+      "team": "Engineering",
+      "type": "Internship",
+      "location": "NYC",
+      "isOpen": true,
+      "summary": "Own the core pipeline that turns messy deduction data into evidence-backed disputes.",
+      "listingMeta": [
+        "Internship",
+        "NYC",
+        "Unpaid"
+      ],
+      "sections": [
+        {
+          "heading": "The role",
+          "paragraphs": [
+            "Mozart builds software that helps CPG and foodservice suppliers recover money retailers and distributors wrongly deduct from their invoices. You would be the first engineer touching the product."
+          ]
+        },
+        {
+          "heading": "What you’ll do",
+          "bullets": [
+            "Own the core pipeline: ingest deduction data (remittances, retailer portal exports, CSVs, PDFs), normalize it, and match each deduction to its invoice, PO and proof of delivery",
+            "Build the dispute engine: classify deductions (shortage, pricing, promo, compliance fines), flag the invalid ones, and assemble dispute packets with backup documents",
+            "Ship the supplier-facing dashboard: recovered dollars, open disputes, aging, win rate",
+            "Stand up the first pilot integrations and keep them running with real customer data",
+            "Set the foundations: data model, auth, audit logs, testing and deployment"
+          ]
+        },
+        {
+          "heading": "You might be a fit if you",
+          "bullets": [
+            "Have shipped real software end to end (a side project, startup, or internship), not just coursework",
+            "Are comfortable in TypeScript or Python, SQL, and a modern stack (we use GitHub, Vercel, Supabase)",
+            "Build fast with AI coding tools (Claude Code, Cursor) and know when to check their work",
+            "Like messy real-world data: PDF parsing, OCR, inconsistent CSVs",
+            "Want ownership and a direct line to customers"
+          ]
+        },
+        {
+          "heading": "Bonus",
+          "paragraphs": [
+            "LLM/agent work (structured extraction, tool use), document parsing, fintech or B2B SaaS, browser automation for portal scraping."
+          ]
+        },
+        {
+          "heading": "Details",
+          "paragraphs": [
+            "15–20 hrs/week during the semester, NYC. Unpaid, with a path to a paid or full-time role."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "founding-engineer",
+      "title": "Founding Engineer",
+      "team": "Engineering",
+      "type": "Full-time",
+      "location": "NYC",
+      "isOpen": true,
+      "summary": "Own the product end to end: architecture, data, AI, and the experience suppliers see.",
+      "listingMeta": [
+        "Full-time",
+        "NYC"
+      ],
+      "sections": [
+        {
+          "heading": "The role",
+          "paragraphs": [
+            "You'll be the first engineer and own the product end to end: architecture, data, AI, and the experience suppliers see. You'll work directly with customers and help decide what we build next."
+          ]
+        },
+        {
+          "heading": "What you’ll own",
+          "bullets": [
+            "The data layer: connectors for remittances, retailer and distributor portals, ERPs and accounting systems, EDI, and the PDFs and spreadsheets that make up the rest",
+            "The matching and validation engine that ties each deduction to its invoice, PO, delivery proof and trade agreement",
+            "AI agents that classify deductions, draft disputes, and submit them through portals, with human review where accuracy matters",
+            "The supplier-facing app: recovery dashboard, dispute queue, reporting",
+            "Security, auditability and reliability from the start, since we handle customers’ financial data",
+            "Hiring and setting the bar for the engineers who follow"
+          ]
+        },
+        {
+          "heading": "About you",
+          "bullets": [
+            "3+ years shipping production software, ideally at an early-stage startup",
+            "Strong in TypeScript and/or Python, Postgres, and modern cloud tooling",
+            "Have built with LLMs in production: structured extraction, tool use, evals",
+            "Comfortable with messy data and unglamorous integrations",
+            "Want to talk to customers, not just tickets"
+          ]
+        },
+        {
+          "heading": "Nice to have",
+          "paragraphs": [
+            "Fintech, AR/AP or ERP integrations; browser automation; document AI/OCR; prior founding or first-ten-engineer experience."
+          ]
+        },
+        {
+          "heading": "Details",
+          "paragraphs": [
+            "Full-time, NYC (in person preferred)."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "forward-deployed-engineer",
+      "title": "Forward Deployed Engineer",
+      "team": "Engineering",
+      "type": "Full-time",
+      "location": "NYC",
+      "isOpen": true,
+      "summary": "Sit with customers, get Mozart running on their real work, and turn what you learn into product.",
+      "listingMeta": [
+        "Full-time",
+        "NYC"
+      ],
+      "sections": [
+        {
+          "heading": "The role",
+          "paragraphs": [
+            "You’ll work alongside our customers’ finance and operations teams to get Mozart running on their real work. You’ll learn how their counterparties behave, connect the systems the work lives in, and turn what you see into product, so each new customer is faster to set up than the last."
+          ]
+        },
+        {
+          "heading": "What you’ll own",
+          "bullets": [
+            "Getting each new customer live: connecting their inboxes, accounting systems, portals and files, and checking the first results with them",
+            "The integrations and scripts a deployment needs, written so the next customer can reuse them",
+            "Working out how each counterparty behaves, its rules, forms, deadlines and habits, and recording it so Mozart learns it once",
+            "Running the first weeks of real work with the customer’s team and fixing what gets in the way",
+            "Bringing what you learn back to the product, and building it in yourself where it makes sense"
+          ]
+        },
+        {
+          "heading": "About you",
+          "bullets": [
+            "2+ years shipping production software, some of it in front of customers",
+            "Strong in TypeScript and/or Python, SQL, and working with APIs and messy files",
+            "Comfortable on a call with a finance team one hour and in the code the next",
+            "A clear writer who can explain what went wrong and what happens next",
+            "Happy to travel to customers when the work needs it"
+          ]
+        },
+        {
+          "heading": "Nice to have",
+          "paragraphs": [
+            "Accounting systems, ERPs or EDI; browser automation; building with LLMs in production; prior forward deployed, solutions or implementation engineering."
+          ]
+        },
+        {
+          "heading": "Details",
+          "paragraphs": [
+            "Full-time, NYC (in person preferred), with travel to customers."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "founding-sdr",
+      "title": "Founding SDR",
+      "team": "Sales",
+      "type": "Full-time",
+      "location": "NYC",
+      "isOpen": true,
+      "summary": "Build the outbound motion with the founder and start conversations with suppliers’ finance leaders.",
+      "listingMeta": [
+        "Full-time",
+        "NYC"
+      ],
+      "sections": [
+        {
+          "heading": "The role",
+          "paragraphs": [
+            "You'll start conversations with the finance leaders at food, beverage and foodservice suppliers who are losing money to deductions. You'll build the outbound motion from scratch with the founder, and own the top of our funnel."
+          ]
+        },
+        {
+          "heading": "What you’ll own",
+          "bullets": [
+            "Finding and qualifying suppliers: building target lists by category, retailer mix and size",
+            "Outbound across email, LinkedIn and phone, with messaging grounded in each prospect’s real deduction pain",
+            "Booking qualified meetings and handing them off with clear notes",
+            "Working trade shows and industry events, both in person and on the follow-up",
+            "Tracking what works in the CRM and feeding objections back into the product and pitch"
+          ]
+        },
+        {
+          "heading": "About you",
+          "bullets": [
+            "1+ years in B2B sales development, or a track record of outbound in a startup or student venture",
+            "Persistent, curious, and comfortable with rejection",
+            "Write short, specific outreach and learn a technical domain quickly",
+            "Fluent with modern outbound tools (HubSpot or similar, Apollo, Clay, LinkedIn)"
+          ]
+        },
+        {
+          "heading": "Nice to have",
+          "paragraphs": [
+            "Selling to CFOs or controllers; CPG, food/bev or distribution experience; finance or accounting coursework."
+          ]
+        },
+        {
+          "heading": "Growth path",
+          "paragraphs": [
+            "Account Executive, customer success, or leading the SDR team as it grows."
+          ]
+        },
+        {
+          "heading": "Details",
+          "paragraphs": [
+            "Full-time, NYC, with some travel to industry events."
+          ]
+        }
+      ]
+    }
+  ]
+}
