@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://www.mozart.financial/">
 <meta property="og:image" content="https://www.mozart.financial/assets/mozart-social-landscape-v1.jpg">
 <link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#111b30">
+<meta name="theme-color" content="#f4f5f1">
 <style>
 /* Layout: Graypass-style long scroll. Light paper page, hairline grids, one navy band for scale + FAQ, giant wordmark footer. Single committed look. */
 :root{
@@ -28,7 +28,7 @@
   --display:"Helvetica Neue",Helvetica,Arial,sans-serif;
   --body:"Helvetica Neue",Helvetica,Arial,sans-serif;
   --mono:"Helvetica Neue",Helvetica,Arial,sans-serif;
-  --wrap:1240px;
+  --wrap:1560px;
   color-scheme:light;
 }
 *{box-sizing:border-box}
@@ -37,7 +37,7 @@ body{margin:0}
 body{background:var(--paper);color:var(--navy);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-@media(min-width:720px){.wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}}
+@media(min-width:720px){.wrap{padding-left:max(40px,4vw,env(safe-area-inset-left,0px));padding-right:max(40px,4vw,env(safe-area-inset-right,0px))}}
 h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance}
 h1{font-size:clamp(48px,6.2vw,86px);line-height:.98;letter-spacing:-.06em;text-wrap:pretty}
 h2{font-size:clamp(34px,4.6vw,60px);line-height:1.08;letter-spacing:-.045em}
@@ -56,8 +56,6 @@ p{margin:0}
 .on-navy .wordmark i,.wordmark.lime i{color:var(--lime)}
 
 /* announcement + nav */
-.bar{background:var(--navy);color:var(--mist);font-size:13px;text-align:center;padding-block:9px}
-.bar b{color:var(--lime);font-weight:500}
 nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(244,245,241,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--navy)}
 nav.top .wrap{display:flex;align-items:center;gap:32px;height:64px}
@@ -200,7 +198,6 @@ footer{padding-block:72px 40px}
   .hero .lede{font-size:18px;margin-top:18px}
   .hero .actions .btn{flex:1}
   #ascii{aspect-ratio:1.6/1}
-  .bar{font-size:12px}
   .strip{padding-block:18px}
   .strip .wrap{display:grid;grid-template-columns:repeat(4,auto);gap:10px 16px;justify-content:start}
   .strip span.lead,.strip a.all{grid-column:1/-1}
@@ -248,7 +245,6 @@ footer.land,.mz-foot{padding-block:96px 40px}
 
 </head>
 <body>
-<div class="bar">Now taking design partners. <a href="https://calendly.com/mozartfinancial/mozart-intro-call-clone" target="_blank" rel="noopener"><b>Book a demo &#8599;</b></a></div>
 
 <nav class="top"><div class="wrap">
   <a class="wordmark" href="/" aria-label="Mozart home">mozart<i>.</i></a>
