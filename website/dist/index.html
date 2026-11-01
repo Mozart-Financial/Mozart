@@ -110,6 +110,12 @@ section{padding-block:110px 40px}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 .travel{animation:travel 3.2s cubic-bezier(.6,0,.3,1) infinite}
 @keyframes travel{0%{transform:translateX(0)}55%,100%{transform:translateX(118px)}}
+.hand{animation:hand 3.6s cubic-bezier(.6,0,.3,1) infinite}
+@keyframes hand{0%,8%{transform:translateX(0);opacity:1}48%{transform:translateX(120px);opacity:1}56%,100%{transform:translateX(120px);opacity:0}}
+.pop{transform-box:fill-box;transform-origin:center;animation:pop 3.6s ease-out infinite}
+@keyframes pop{0%,48%{transform:scale(.4);opacity:0}58%{transform:scale(1.1);opacity:1}64%,90%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:0}}
+.tick{stroke-dasharray:22;animation:tick 3.6s ease-out infinite}
+@keyframes tick{0%,56%{stroke-dashoffset:22;opacity:1}70%,90%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
 .scan{animation:scan 3s ease-in-out infinite}
 @keyframes scan{0%,100%{transform:translateY(0)}50%{transform:translateY(64px)}}
 .draw{stroke-dasharray:200;animation:draw 3.6s ease-in-out infinite}
@@ -273,8 +279,8 @@ footer.land,.mz-foot{padding-block:96px 40px}
         <g class="ln-soft"><line x1="34" y1="62" x2="92" y2="62"/><line x1="34" y1="76" x2="84" y2="76"/><line x1="34" y1="104" x2="90" y2="104"/><line x1="34" y1="118" x2="80" y2="118"/></g>
         <rect x="32" y="84" width="62" height="12" rx="2" class="fl-lime"/>
         <path d="M94 90 C 120 90, 118 120, 140 120" class="ln draw"/>
-        <rect x="126" y="104" width="54" height="34" rx="4" class="ln fl-paper"/>
-        <text x="133" y="118" class="tx">SOURCE</text><text x="133" y="131" class="tx-soft">p. 2, line 14</text>
+        <rect x="116" y="104" width="76" height="34" rx="4" class="ln fl-paper"/>
+        <text x="123" y="118" class="tx">SOURCE</text><text x="123" y="131" class="tx-soft">p. 2, line 14</text>
       </svg></div>
       <p class="eyebrow k">Step 02</p><h3>Prepare</h3><p>Every fact is traced to the page it came from before anyone relies on it.</p>
     </div>
@@ -282,7 +288,8 @@ footer.land,.mz-foot{padding-block:96px 40px}
       <div class="well"><svg viewBox="0 0 200 210" aria-hidden="true">
         <rect x="18" y="80" width="44" height="50" rx="4" class="ln fl-paper"/><rect x="138" y="80" width="44" height="50" rx="4" class="ln fl-paper"/>
         <line x1="62" y1="105" x2="138" y2="105" class="ln-soft" stroke-dasharray="3 4"/>
-        <g class="travel"><rect x="2" y="97" width="16" height="16" rx="2" class="fl-lime" transform="translate(58 0)"/></g>
+        <g class="hand"><rect x="32" y="97" width="16" height="16" rx="2" class="fl-lime"/></g>
+        <circle cx="160" cy="105" r="12" class="fl-lime pop"/><path d="M154 105.5 l4.5 4.5 l8 -9" class="tick" fill="none" stroke="var(--navy)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
         <rect x="64" y="146" width="72" height="22" rx="11" class="fl-navy"/><text x="77" y="160" style="font-family:var(--mono);font-size:9.5px;fill:var(--lime)">APPROVED</text>
         <text x="22" y="74" class="tx-soft">YOU</text><text x="138" y="74" class="tx-soft">THEM</text>
       </svg></div>
