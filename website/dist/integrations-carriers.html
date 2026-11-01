@@ -270,6 +270,13 @@ body{zoom:1;background:var(--paper);font-family:"Helvetica Neue",Helvetica,Arial
 .mz-legal{margin-top:48px;font-size:13px;color:var(--ink2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 @media(max-width:799px){.ihero .count{margin-top:16px}}
 @media(max-width:600px){.mz-cols{grid-template-columns:1fr 1fr}.mz-foot{padding-block:48px 28px}.ihero{padding-block:32px 24px}}
+
+/* landscape footer (option B): photo printed into the paper */
+footer.land,.mz-foot{position:relative;isolation:isolate;overflow:hidden}
+footer.land .ph,.mz-foot .ph{position:absolute;z-index:-1;inset:0;background:url(/assets/revenue-landscape.jpg) 50% 65%/cover no-repeat;filter:grayscale(1);mix-blend-mode:multiply;opacity:.16;pointer-events:none}
+footer.land::after,.mz-foot::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(var(--paper) 0%,transparent 45%);pointer-events:none}
+footer.land,.mz-foot{padding-block:96px 40px}
+@media(max-width:720px){footer.land,.mz-foot{padding-block:64px 28px}footer.land .ph,.mz-foot .ph{background-position:65% 70%}}
 </style>
 </head>
 <body id="top">
@@ -293,6 +300,6 @@ body{zoom:1;background:var(--paper);font-family:"Helvetica Neue",Helvetica,Arial
 <div class="btns"><a class="btn-l btn-n" href="https://calendly.com/mozartfinancial/mozart-intro-call-clone" target="_blank" rel="noopener">Book a demo <span>&#8599;</span></a></div>
 </div></section>
 </main>
-<footer class="mz-foot"><div class="mz-w"><a class="mz-giant" href="/" aria-label="Mozart home">mozart<i>.</i></a><div class="mz-cols"><div><h4>Product</h4><ul><li><a href="/#platform">Platform</a></li><li><a href="/integrations">Integrations</a></li><li><a href="https://calendly.com/mozartfinancial/mozart-intro-call-clone" target="_blank" rel="noopener">Book a demo</a></li></ul></div><div><h4>Company</h4><ul><li><a href="/careers">Careers</a></li><li><a href="/terms">Terms</a></li><li><a href="/privacy">Privacy</a></li></ul></div><div><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/company/mozart-financial" target="_blank" rel="noopener">LinkedIn</a></li></ul></div></div><div class="mz-legal"><span>&copy; 2026 Mozart</span><span>Orchestrating enterprise knowledge</span></div></div></footer>
+<footer class="mz-foot"><span class="ph" aria-hidden="true"></span><div class="mz-w"><a class="mz-giant" href="/" aria-label="Mozart home">mozart<i>.</i></a><div class="mz-cols"><div><h4>Product</h4><ul><li><a href="/#platform">Platform</a></li><li><a href="/integrations">Integrations</a></li><li><a href="https://calendly.com/mozartfinancial/mozart-intro-call-clone" target="_blank" rel="noopener">Book a demo</a></li></ul></div><div><h4>Company</h4><ul><li><a href="/careers">Careers</a></li><li><a href="/terms">Terms</a></li><li><a href="/privacy">Privacy</a></li></ul></div><div><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/company/mozart-financial" target="_blank" rel="noopener">LinkedIn</a></li></ul></div></div><div class="mz-legal"><span>&copy; 2026 Mozart</span><span>Orchestrating enterprise knowledge</span></div></div></footer>
 </body>
 </html>
