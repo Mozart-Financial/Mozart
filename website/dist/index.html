@@ -215,6 +215,13 @@ footer{padding-block:72px 40px}
   footer{padding-block:48px 28px}
   .fcols{margin-top:32px}
 }
+
+/* landscape footer (option B): photo printed into the paper */
+footer.land,.mz-foot{position:relative;isolation:isolate;overflow:hidden}
+footer.land .ph,.mz-foot .ph{position:absolute;z-index:-1;inset:0;background:url(/assets/revenue-landscape.jpg) 50% 65%/cover no-repeat;filter:grayscale(1);mix-blend-mode:multiply;opacity:.16;pointer-events:none}
+footer.land::after,.mz-foot::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(var(--paper) 0%,transparent 45%);pointer-events:none}
+footer.land,.mz-foot{padding-block:96px 40px}
+@media(max-width:720px){footer.land,.mz-foot{padding-block:64px 28px}footer.land .ph,.mz-foot .ph{background-position:65% 70%}}
 /* entrance: transform only, content readable at rest */
 @supports (animation-timeline:view()){
   .rise{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
@@ -351,7 +358,7 @@ footer{padding-block:72px 40px}
 </div>
 </main>
 
-<footer><div class="wrap">
+<footer class="land"><span class="ph" aria-hidden="true"></span><div class="wrap">
   <a class="giant" href="#top" aria-label="Back to top">mozart<i>.</i></a>
   <div class="fcols">
     <div><h4>Product</h4><ul><li><a href="#platform">Platform</a></li><li><a href="/integrations">Integrations</a></li><li><a href="https://calendly.com/mozartfinancial/mozart-intro-call-clone" target="_blank" rel="noopener">Book a demo</a></li></ul></div>
