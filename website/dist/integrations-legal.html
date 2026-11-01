@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://www.mozart.financial/integrations-legal">
 <meta property="og:image" content="https://www.mozart.financial/assets/mozart-social-landscape-v1.jpg">
 <link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#111b30">
+<meta name="theme-color" content="#f4f5f1">
 <style>
 :root{--navy:#111b30;--navy-light:#1b2943;--paper:#f3f5f5;--white:#fbfcfa;--lime:#d7f56c;--lime-soft:#eef8cf;--muted:#afb8c8;--line:#384256;--ink2:#556071;--bd:#dfe4e6;--card:#e8ecec;--card-bd:#d9dfe0;--dot:#d3dadb;--green:#466626;--olive:#647047;--pill:#eef1f3;--hover-bd:#b8bcc4;color-scheme:light}
 *{box-sizing:border-box}
@@ -223,10 +223,57 @@ body{zoom:.9}
 @media (max-width:799px){.two,.cards3,.steps,.notes,.sh{grid-template-columns:minmax(0,1fr)}.two{gap:40px}.sh{gap:0}.sh .label{padding-top:0;margin-bottom:22px}.band{padding-block:72px}.grid2{grid-template-columns:minmax(0,1fr)}.hbot{display:block}.hbot .btns{margin-top:28px}.big1{margin:30px 0 40px}}
 @media (max-width:799px){.hero-shot{width:100%}}
 @media (max-width:600px){.cards3 .stage .ui{min-height:0}.hero{padding-block:45px 55px}.ihero{padding-block:45px 55px}.big1{font-size:clamp(44px,12.5vw,64px)}.shotband{background:linear-gradient(var(--navy) 0 30%,var(--paper) 30% 100%)}.after-hero{padding-top:48px}.hbot .lead{font-size:17px}.pillars,.grid3,.pn{grid-template-columns:minmax(0,1fr)}.flow{grid-template-columns:minmax(0,1fr)}.stage{padding:22px}.logos8{gap:10px}.pn .nx{text-align:left}.btns a{width:100%;justify-content:space-between}}
+
+/* 2026-11 theme: light Graypass-style chrome shared with the homepage */
+:root{--paper:#F4F5F1;--rule:#D9DCD4;--paper-2:#ECEEE8}
+body{zoom:1;background:var(--paper);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.mz-w{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media(min-width:720px){.mz-w{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media(min-width:720px){.wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}}
+.mz-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(244,245,241,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.mz-nav .mz-w{display:flex;align-items:center;gap:32px;height:64px}
+.mz-mark,.mz-giant{font-weight:600;letter-spacing:-.04em;text-decoration:none;color:var(--navy)}
+.mz-mark{font-size:22px}.mz-mark i,.mz-giant i{font-style:normal;color:var(--green)}
+.mz-nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px}
+.mz-nav ul a{text-decoration:none;color:var(--ink2)}.mz-nav ul a:hover,.mz-nav ul a[aria-current]{color:var(--navy)}
+.mz-btn{margin-left:auto;display:inline-flex;align-items:center;min-height:38px;padding:0 16px;border-radius:6px;background:var(--navy);color:var(--paper);font-weight:600;font-size:14px;text-decoration:none}
+@media(max-width:600px){.mz-nav ul{display:none}}
+.crumb{background:var(--paper);color:var(--ink2);border-bottom:0}
+.crumb a{color:var(--green)}
+.navy.ihero{background:var(--paper);color:var(--navy)}
+.ihero .label{color:var(--green)}
+.ihero .lime{color:var(--green)}
+.ihero .lead,.navy.ihero .lead{color:var(--ink2)}
+.ihero .big1{font-size:clamp(44px,6.4vw,88px);letter-spacing:-.06em;margin:24px 0 32px}
+.hbot{border-top:1px solid var(--rule)}
+.catp a{border-color:var(--rule);color:var(--ink2);background:var(--paper)}
+.catp a:hover{border-color:var(--navy);color:var(--navy)}
+.catp a[aria-current="page"]{background:var(--lime);border-color:var(--lime);color:var(--navy)}
+.paper.band{padding-block:40px 96px}
+.card{background:var(--paper);border-color:var(--rule);border-radius:8px}
+.card:hover,.icard:hover{box-shadow:none;transform:none;border-color:var(--navy)}
+.stage{background-color:var(--paper-2);background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);background-size:22px 22px;border-bottom:1px solid var(--rule)}
+.cap{background:var(--paper)}
+.logos8 span,.tile{box-shadow:none;border-color:var(--rule)}
+.icard{background:var(--paper);border-color:var(--rule)}
+.ui{box-shadow:none;border-color:var(--rule);background:var(--paper)}
+.closing{background:var(--navy);color:var(--paper)}
+.closing p{color:#C9D1DE}
+.closing .btn-l.btn-n{background:var(--lime);color:var(--navy);border-color:var(--lime);border-radius:6px;font-weight:600}
+.mz-foot{padding-block:72px 40px;background:var(--paper)}
+.mz-giant{display:block;line-height:.8;letter-spacing:-.07em;font-size:clamp(84px,20vw,260px)}
+.mz-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:56px;border-top:1px solid var(--rule);padding-top:28px}
+.mz-cols h4{margin:0 0 12px;font-size:14px;font-weight:500}
+.mz-cols ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:14px}
+.mz-cols a{color:var(--ink2);text-decoration:none}.mz-cols a:hover{color:var(--navy)}
+.mz-legal{margin-top:48px;font-size:13px;color:var(--ink2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:799px){.ihero .count{margin-top:16px}}
+@media(max-width:600px){.mz-cols{grid-template-columns:1fr 1fr}.mz-foot{padding-block:48px 28px}.ihero{padding-block:32px 24px}}
 </style>
 </head>
 <body id="top">
-<header class="hdr"><div class="wrap"><a class="brand" href="/" aria-label="Mozart Financial home">mozart<span class="p">.</span></a><nav class="hnav" aria-label="Main navigation"><a class="tx" href="/#solution">Product</a><a class="tx" href="/integrations" aria-current="page">Integrations</a><a class="contact-link" href="https://calendly.com/mozartfinancial/mozart-intro-call-clone" target="_blank" rel="noopener">Book a demo <span aria-hidden="true">&#8599;</span></a></nav></div></header>
+<nav class="mz-nav"><div class="mz-w"><a class="mz-mark" href="/" aria-label="Mozart home">mozart<i>.</i></a><ul><li><a href="/#platform">Platform</a></li><li><a href="/integrations" aria-current="page">Integrations</a></li><li><a href="/careers">Careers</a></li></ul><a class="mz-btn" href="https://calendly.com/mozartfinancial/mozart-intro-call-clone" target="_blank" rel="noopener">Book a demo</a></div></nav>
 <main>
 <div class="crumb"><div class="wrap"><a href="/integrations">Integrations &#8599;</a> / Legal, audit and advisers</div></div>
 <section class="navy ihero"><div class="wrap">
@@ -246,6 +293,6 @@ body{zoom:.9}
 <div class="btns"><a class="btn-l btn-n" href="https://calendly.com/mozartfinancial/mozart-intro-call-clone" target="_blank" rel="noopener">Book a demo <span>&#8599;</span></a></div>
 </div></section>
 </main>
-<footer class="foot"><img class="land" src="/assets/revenue-landscape.jpg" alt="" loading="lazy" width="1536" height="1024"><div class="wrap"><div class="ftop"><a class="fbrand" href="/" aria-label="Mozart Financial, back to top">mozart<span>.</span></a><span>ORCHESTRATING<br>ENTERPRISE WORKFLOWS.</span></div><nav class="flinks" aria-label="Footer links"><a href="/careers">Careers</a><a href="/integrations">Integrations</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms &amp; EULA</a></nav><div class="fbot"><span>&copy; 2026 Mozart Financial</span><a href="#top">Back to top &#8593;</a></div></div></footer>
+<footer class="mz-foot"><div class="mz-w"><a class="mz-giant" href="/" aria-label="Mozart home">mozart<i>.</i></a><div class="mz-cols"><div><h4>Product</h4><ul><li><a href="/#platform">Platform</a></li><li><a href="/integrations">Integrations</a></li><li><a href="https://calendly.com/mozartfinancial/mozart-intro-call-clone" target="_blank" rel="noopener">Book a demo</a></li></ul></div><div><h4>Company</h4><ul><li><a href="/careers">Careers</a></li><li><a href="/terms">Terms</a></li><li><a href="/privacy">Privacy</a></li></ul></div><div><h4>Connect</h4><ul><li><a href="https://www.linkedin.com/company/mozart-financial" target="_blank" rel="noopener">LinkedIn</a></li></ul></div></div><div class="mz-legal"><span>&copy; 2026 Mozart</span><span>Orchestrating enterprise knowledge</span></div></div></footer>
 </body>
 </html>
