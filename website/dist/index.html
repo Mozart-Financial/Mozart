@@ -70,6 +70,29 @@ nav.top .btn{min-height:38px;font-size:14px}
 .hero .lede{font-size:21px;line-height:1.5;color:var(--ink-2);max-width:38ch;margin-top:28px}
 .hero .lede .mark{color:var(--navy)}
 .hero .actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.team{margin-top:8px;padding-bottom:56px}.team-label{font-size:13px;color:var(--ink-2);margin:0 0 22px}
+.team-logos{display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap}
+.team-logos .lg{display:block;width:auto;filter:grayscale(1) brightness(.55) contrast(1.1);opacity:.7}
+.team-logos .lg-google{height:27px}.team-logos .lg-roth{height:31px}.team-logos .lg-ever{height:19px}.team-logos .lg-meta{height:23px}.team-logos .lg-ut{height:36px}.team-logos .lg-vandy{height:28px}
+.team-logos .lg-mercor{display:flex;align-items:center;gap:8px;color:var(--navy);font-weight:600;font-size:20px;letter-spacing:-.02em;filter:none;opacity:.7}
+.team-logos .lg-mercor img{height:21px;width:auto;filter:grayscale(1) brightness(.55) contrast(1.1)}
+@media(max-width:720px){.team{padding-bottom:36px}.team-logos{justify-content:flex-start;gap:16px 28px}.team-logos .lg{transform:scale(.85);transform-origin:left center}}
+#eval{padding-top:110px}
+.eval-p{font-size:19px;line-height:1.5;color:var(--ink-2);max-width:40em;margin:18px 0 0}
+.evpanel{background:var(--navy);border-radius:16px;padding:56px 40px;display:grid;grid-template-columns:200px 1fr auto 1fr 200px;align-items:center;gap:0;color:var(--paper);margin-top:8px}
+.evcard{border:1px solid rgba(201,209,222,.35);border-radius:10px;padding:18px 22px;display:grid;gap:6px;font-size:15px;background:rgba(255,255,255,.02)}
+.evcard b{font-weight:500;display:flex;align-items:center;gap:8px}.evcard span{color:var(--mist);font-size:13px}
+.evcard .dot{width:7px;height:7px;border-radius:50%;background:var(--lime);display:inline-block}
+.evline{height:0;border-top:1px solid rgba(201,209,222,.35);margin:0 12px}.evline.dashed{border-top-style:dashed}
+.evmid{display:grid;justify-items:center;gap:16px}
+.evgrid{display:grid;grid-template-columns:repeat(12,32px);gap:6px}
+.evgrid i{display:block;width:32px;height:32px;border-radius:6px;background:var(--navy-2);position:relative;transition:background .25s}
+.evgrid i.on{background:var(--lime)}
+.evgrid i.ask::after{content:"";position:absolute;inset:9px;border:1.5px solid rgba(201,209,222,.7);border-radius:3px 3px 7px 7px}
+.evgrid i.on.ask::after{border-color:var(--green)}
+.evgrid i.bad{background:#F2D9D3}.evgrid i.bad::after{content:"\00d7";position:absolute;inset:0;display:grid;place-items:center;color:var(--navy);font-size:18px;font-weight:600}
+.evcount{font-size:14px;color:var(--mist);margin:0;font-variant-numeric:tabular-nums}
+@media(max-width:1000px){.evpanel{grid-template-columns:1fr;gap:18px;padding:32px 20px}.evline{display:none}.evgrid{grid-template-columns:repeat(12,minmax(0,1fr));width:100%;gap:4px}.evgrid i{width:auto;height:auto;aspect-ratio:1;border-radius:4px}.evgrid i.bad::after{font-size:13px}.evgrid i::after{inset:22%}.evcard{width:100%;max-width:320px;justify-self:center}}
 .hero .note{margin-top:22px;font-family:var(--mono);font-size:12px;color:var(--ink-2)}
 #ascii{width:100%;aspect-ratio:1.15/1;display:block;max-width:100%}
 @media(max-width:900px){.hero{grid-template-columns:1fr;padding-block:48px 24px}}
@@ -212,6 +235,7 @@ footer{padding-block:72px 40px}
   .cell .ill{height:auto;aspect-ratio:1/1;grid-row:1/3}
   .cell h3{margin-top:0;font-size:17px}.cell p{margin-top:0;font-size:14px}
   .band{margin-top:64px;padding-block:64px 48px}
+  #eval{padding-top:64px}
   .faq{padding-top:48px}
   .qa button{font-size:16px;grid-template-columns:34px 1fr 20px}
   .qa .ans p{padding-left:34px;font-size:15px}
@@ -260,6 +284,18 @@ footer.land,.mz-foot{padding-block:96px 40px}
     <div class="actions"><a class="btn btn-dark" href="https://calendly.com/mozartfinancial/mozart-intro-call-clone" target="_blank" rel="noopener">Book a demo</a><a class="btn btn-ghost" href="#platform">See how it works</a></div>
       </div>
   <canvas id="ascii" aria-label="Two organizations drawn in characters, joined by a band that carries work between them"></canvas>
+</div>
+<div class="wrap team">
+  <p class="team-label">Built by a team from</p>
+  <div class="team-logos">
+    <span class="lg lg-mercor"><img src="/assets/logos/mercor.svg" alt=""><span>Mercor</span></span>
+    <img class="lg lg-google" src="/assets/logos/google.svg" alt="Google">
+    <img class="lg lg-roth" src="/assets/logos/rothschild.png" alt="Rothschild &amp; Co">
+    <img class="lg lg-meta" src="/assets/logos/meta.svg" alt="Meta">
+    <img class="lg lg-ever" src="/assets/logos/evercore.svg" alt="Evercore">
+    <img class="lg lg-ut" src="/assets/logos/utaustin.svg" alt="The University of Texas at Austin">
+    <img class="lg lg-vandy" src="/assets/logos/vanderbilt.svg" alt="Vanderbilt University">
+  </div>
 </div>
 
 <div class="strip"><div class="wrap">
@@ -370,6 +406,25 @@ footer.land,.mz-foot{padding-block:96px 40px}
   <p class="more"><a class="btn btn-ghost" href="/integrations">See all 370 integrations &#8594;</a></p>
 </div></section>
 
+<section id="eval"><div class="wrap">
+  <div class="sec-head rise">
+    <p class="eyebrow">Before anything changes</p>
+    <h2 style="margin-top:12px">Tested on your own work before it goes live.</h2>
+    <p class="eval-p">Every job Mozart has run for you, and every call your team made on it, becomes a private test set. Nothing public, nothing borrowed from another company.</p>
+    <p class="eval-p">A change to a procedure, a model or the way Mozart acts is run against that set first, including the cases where the right answer is to stop and ask you. Only a version that passes goes live.</p>
+  </div>
+  <div class="evpanel" aria-label="A new version of a procedure being checked against past cases before it replaces the live one">
+    <div class="evcard"><b>Procedure change</b><span>v5</span></div>
+    <div class="evline dashed"></div>
+    <div class="evmid">
+      <div class="evgrid" id="evgrid"></div>
+      <p class="evcount"><span id="evn">0</span> of 72</p>
+    </div>
+    <div class="evline"></div>
+    <div class="evcard"><b><i class="dot"></i>Live</b><span>v4</span></div>
+  </div>
+</div></section>
+
 <div class="band on-navy" id="close">
   <div class="wrap">
     <div class="close">
@@ -451,6 +506,23 @@ function loop(){t+=.016;frame();if(!reduce)requestAnimationFrame(loop)}
 function all(){size();frame()}
 addEventListener('resize',all);
 document.fonts?.ready.then(all);all();if(!reduce)requestAnimationFrame(loop);
+
+/* Evaluation grid */
+(function(){
+  const g=document.getElementById('evgrid'),n=document.getElementById('evn');if(!g)return;
+  const ask=new Set([5,17,29,41,53,65,70]),bad=new Set([19]);const cells=[];
+  for(let i=0;i<72;i++){const c=document.createElement('i');if(ask.has(i))c.className='ask';g.appendChild(c);cells.push(c)}
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // fill column by column so the wave moves left to right
+  const order=[];for(let col=0;col<12;col++)for(let row=0;row<6;row++)order.push(row*12+col);
+  if(reduce){order.forEach(i=>cells[i].classList.add(bad.has(i)?'bad':'on'));n.textContent='72';return}
+  let k=0,done=0;
+  function tick(){
+    if(k<order.length){const i=order[k++];cells[i].classList.add(bad.has(i)?'bad':'on');n.textContent=String(k);setTimeout(tick,95)}
+    else setTimeout(()=>{cells.forEach(c=>c.classList.remove('on','bad'));k=0;n.textContent='0';setTimeout(tick,600)},2600)
+  }
+  setTimeout(tick,600);
+})();
 
 /* FAQ accordion */
 document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()=>{
