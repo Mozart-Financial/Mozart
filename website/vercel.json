@@ -73,5 +73,11 @@
       "destination": "/careers",
       "permanent": false
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/desktop/download/:platform",
+      "destination": "https://mozart2-web.vercel.app/api/desktop/download/:platform"
+    }
   ]
 }
